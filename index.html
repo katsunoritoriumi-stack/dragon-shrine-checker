@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>龍神スポットマップ</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif; background: #0a0a1a; color: #e0e0ff; height: 100dvh; display: flex; flex-direction: column; }
+
+    header {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a0a2e 100%);
+      border-bottom: 1px solid #2a1a4e;
+      padding: 10px 16px;
+      display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+      box-shadow: 0 2px 12px rgba(80,0,180,0.3);
+    }
+    header h1 { font-size: 1.1rem; color: #c8a8ff; letter-spacing: 0.05em; white-space: nowrap; }
+    header .count { font-size: 0.8rem; color: #8888bb; margin-left: auto; white-space: nowrap; }
+
+    #controls {
+      background: #0d1220;
+      border-bottom: 1px solid #1a1a3a;
+      padding: 8px 12px;
+      display: flex; gap: 8px; align-items: center; flex-wrap: wrap; flex-shrink: 0;
+    }
+    #search {
+      flex: 1; min-width: 160px; max-width: 320px;
+      padding: 6px 12px; border-radius: 20px;
+      border: 1px solid #3a2a6a; background: #1a1230;
+      color: #e0e0ff; font-size: 0.85rem; outline: none;
+    }
+    #search:focus { border-color: #8866cc; }
+    #pref-select {
+      padding: 6px 10px; border-radius: 20px;
+      border: 1px solid #3a2a6a; background: #1a1230;
+      color: #e0e0ff; font-size: 0.85rem; outline: none; cursor: pointer;
+    }
+    #result-count { font-size: 0.8rem; color: #8888bb; }
+
+    #map { flex: 1; }
+
+    .leaflet-popup-content-wrapper {
+      background: #1a1230; border: 1px solid #5533aa; border-radius: 10px; color: #e0e0ff;
+      box-shadow: 0 4px 20px rgba(80,0,180,0.5);
+    }
+    .leaflet-popup-tip { background: #1a1230; }
+    .popup-name { font-size: 0.95rem; font-weight: bold; color: #c8a8ff; margin-bottom: 6px; }
+    .popup-pref { display: inline-block; background: #3a1a6e; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; color: #bb99ff; margin-bottom: 6px; }
+    .popup-address { font-size: 0.8rem; color: #aaaacc; margin-bottom: 4px; }
+    .popup-landmark { font-size: 0.8rem; color: #ccccee; }
+    .popup-maps { display: inline-block; margin-top: 8px; padding: 4px 12px; background: #4285f4; color: white; border-radius: 12px; font-size: 0.75rem; text-decoration: none; }
+    .popup-maps:hover { background: #5a95ff; }
+
+    .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
+      background-color: rgba(100, 0, 200, 0.25) !important;
+    }
+    .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+      background-color: rgba(140, 60, 255, 0.7) !important;
+      color: white !important; font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐉 龍神スポットマップ</h1>
+    <span class="count" id="total-count"></span>
+  </header>
+  <div id="controls">
+    <input id="search" type="text" placeholder="🔍 龍神名・住所で検索…">
+    <select id="pref-select"><option value="">全都道府県</option></select>
+    <span id="result-count"></span>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="spots_data.js"></script>
+  <script>
+    const map = L.map('map', { center: [37.0, 137.0], zoom: 5 });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors', maxZoom: 18
+    }).addTo(map);
+
+    const dragonIcon = L.divIcon({
+      className: '',
+      html: '<div style="width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#cc88ff,#6600cc);border:2px solid #aa66ff;box-shadow:0 0 8px #aa66ff88;"></div>',
+      iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -12]
+    });
+
+    const cluster = L.markerClusterGroup({ maxClusterRadius: 50, showCoverageOnHover: false });
+
+    // 都道府県リスト
+    const prefs = [...new Set(SPOTS.map(s => s.prefecture))].sort();
+    const sel = document.getElementById('pref-select');
+    prefs.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p; opt.textContent = p;
+      sel.appendChild(opt);
+    });
+
+    let allMarkers = [];
+
+    function buildMarker(spot) {
+      const mapsUrl = `https://www.google.com/maps?q=${spot.lat},${spot.lng}&z=15`;
+      const popup = `
+        <div class="popup-pref">${spot.prefecture}</div>
+        <div class="popup-name">${spot.name}</div>
+        <div class="popup-address">📍 ${spot.address}</div>
+        ${spot.landmark ? `<div class="popup-landmark">🗺 ${spot.landmark}</div>` : ''}
+        <a class="popup-maps" href="${mapsUrl}" target="_blank">Googleマップで開く</a>
+      `;
+      const m = L.marker([spot.lat, spot.lng], { icon: dragonIcon }).bindPopup(popup, { maxWidth: 280 });
+      m._spotData = spot;
+      return m;
+    }
+
+    SPOTS.forEach(spot => {
+      const m = buildMarker(spot);
+      allMarkers.push(m);
+      cluster.addLayer(m);
+    });
+    map.addLayer(cluster);
+
+    document.getElementById('total-count').textContent = `全${SPOTS.length}件表示中`;
+    document.getElementById('result-count').textContent = `${SPOTS.length}件`;
+
+    function applyFilter() {
+      const query = document.getElementById('search').value.trim().toLowerCase();
+      const pref  = document.getElementById('pref-select').value;
+      cluster.clearLayers();
+      let count = 0;
+      allMarkers.forEach(m => {
+        const s = m._spotData;
+        const matchPref = !pref || s.prefecture === pref;
+        const matchQ = !query || s.name.toLowerCase().includes(query) ||
+                       s.address.toLowerCase().includes(query) ||
+                       s.landmark.toLowerCase().includes(query);
+        if (matchPref && matchQ) { cluster.addLayer(m); count++; }
+      });
+      document.getElementById('result-count').textContent = `${count}件`;
+      document.getElementById('total-count').textContent = `${count}件表示中`;
+    }
+
+    document.getElementById('search').addEventListener('input', applyFilter);
+    document.getElementById('pref-select').addEventListener('change', applyFilter);
+  </script>
+</body>
+</html>
