@@ -52,8 +52,20 @@
     .popup-pref { display: inline-block; background: #3a1a6e; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; color: #bb99ff; margin-bottom: 6px; }
     .popup-address { font-size: 0.8rem; color: #aaaacc; margin-bottom: 4px; }
     .popup-landmark { font-size: 0.8rem; color: #ccccee; }
-    .popup-maps { display: inline-block; margin-top: 8px; padding: 4px 12px; background: #4285f4; color: white; border-radius: 12px; font-size: 0.75rem; text-decoration: none; }
+    .popup-btns { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .popup-maps { display: inline-block; padding: 4px 12px; background: #4285f4; color: white; border-radius: 12px; font-size: 0.75rem; text-decoration: none; }
     .popup-maps:hover { background: #5a95ff; }
+    .popup-page { display: inline-block; padding: 4px 12px; background: #5533aa; color: white; border-radius: 12px; font-size: 0.75rem; text-decoration: none; }
+    .popup-page:hover { background: #7755cc; }
+
+    #legend {
+      position: absolute; bottom: 28px; right: 8px; z-index: 1000;
+      background: rgba(13,10,30,0.92); border: 1px solid #3a2a6a;
+      border-radius: 10px; padding: 8px 12px; font-size: 0.72rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+    .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.3); }
 
     .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
       background-color: rgba(100, 0, 200, 0.25) !important;
@@ -74,7 +86,22 @@
     <select id="pref-select"><option value="">全都道府県</option></select>
     <span id="result-count"></span>
   </div>
-  <div id="map"></div>
+  <div id="map">
+    <div id="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#F5F5F5;border-color:#BBBBBB"></div>白</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#BDD0E0;border-color:#8AAABB"></div>白銀</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#9E9E9E;border-color:#616161"></div>銀</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FFD700;border-color:#B8860B"></div>金</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#AB47BC;border-color:#6A1B9A"></div>紫</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1565C0;border-color:#0D3C77"></div>群青</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#29B6F6;border-color:#0277BD"></div>青</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#66BB6A;border-color:#2E7D32"></div>緑</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FFEE58;border-color:#F9A825"></div>黄</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FFA726;border-color:#E65100"></div>橙</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#EF5350;border-color:#B71C1C"></div>赤</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#424242;border-color:#212121"></div>黒</div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -85,11 +112,13 @@
       attribution: '© OpenStreetMap contributors', maxZoom: 18
     }).addTo(map);
 
-    const dragonIcon = L.divIcon({
-      className: '',
-      html: '<div style="width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#cc88ff,#6600cc);border:2px solid #aa66ff;box-shadow:0 0 8px #aa66ff88;"></div>',
-      iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -12]
-    });
+    function makeIcon(fill, border) {
+      return L.divIcon({
+        className: '',
+        html: `<div style="width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 35%,${fill}cc,${fill});border:2px solid ${border};box-shadow:0 0 7px ${fill}99;"></div>`,
+        iconSize: [18, 18], iconAnchor: [9, 9], popupAnchor: [0, -11]
+      });
+    }
 
     const cluster = L.markerClusterGroup({ maxClusterRadius: 50, showCoverageOnHover: false });
 
@@ -111,9 +140,13 @@
         <div class="popup-name">${spot.name}</div>
         <div class="popup-address">📍 ${spot.address}</div>
         ${spot.landmark ? `<div class="popup-landmark">🗺 ${spot.landmark}</div>` : ''}
-        <a class="popup-maps" href="${mapsUrl}" target="_blank">Googleマップで開く</a>
+        <div class="popup-btns">
+          <a class="popup-page" href="${spot.pageUrl}" target="_blank">🐉 龍神ページ</a>
+          <a class="popup-maps" href="${mapsUrl}" target="_blank">🗺 Googleマップ</a>
+        </div>
       `;
-      const m = L.marker([spot.lat, spot.lng], { icon: dragonIcon }).bindPopup(popup, { maxWidth: 280 });
+      const icon = makeIcon(spot.fill, spot.border);
+      const m = L.marker([spot.lat, spot.lng], { icon }).bindPopup(popup, { maxWidth: 280 });
       m._spotData = spot;
       return m;
     }
