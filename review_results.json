@@ -1,0 +1,2082 @@
+[
+  {
+    "row_num": 2,
+    "name": "第4金武(ヘイルエエン)",
+    "landmark": "皇大神宮別宮(瀧原宮: 若宮神社の本殿:水神)",
+    "lat_original": 34.36597922,
+    "lng_original": 136.4262408,
+    "reverse_address": "日本、〒519-2703 三重県度会郡大紀町滝原８７２"
+  },
+  {
+    "row_num": 3,
+    "name": "第6群青麟(ヨエイアオイ)",
+    "landmark": "瀧原宮(たきはらのみや)の境内の小川",
+    "lat_original": 34.36604542,
+    "lng_original": 136.4258634,
+    "reverse_address": "日本、〒519-2703 三重県度会郡大紀町滝原８７２"
+  },
+  {
+    "row_num": 4,
+    "name": "第9銀龍(ベウキニエレ)",
+    "landmark": "伊勢神宮「月夜見宮(豊受大神宮別宮)」創造主セザナ神の本殿(返り御霊所在地)、本殿手前の一番大きな杉の巨木に龍管が入力している。",
+    "lat_original": 34.4928997,
+    "lng_original": 136.7059878,
+    "reverse_address": "日本、〒516-0072 三重県伊勢市宮後１丁目３−１９"
+  },
+  {
+    "row_num": 5,
+    "name": "第9黒麟(ロキーナエル)",
+    "landmark": "「(伊勢神宮別宮)月夜見宮(豊受大神宮別宮)」創造主セザナ神の本殿(返り御霊所在地)、本殿に龍管が入力し、魔界ナグは本殿の御霊の中に開いている。:【ヤエゲリア龍神】",
+    "lat_original": 34.4928997,
+    "lng_original": 136.7059878,
+    "reverse_address": "日本、〒516-0072 三重県伊勢市宮後１丁目３−１９"
+  },
+  {
+    "row_num": 6,
+    "name": "第1黒鳳(ズイヨケオン)",
+    "landmark": "「岩上神社」の巨石(神籠石: ひもろぎいし)に龍管が入力しており、朱塗りの本殿に魔界ナグが開いている。",
+    "lat_original": 34.44045417,
+    "lng_original": 134.8416602,
+    "reverse_address": "日本、〒656-1541 兵庫県淡路市柳澤乙６１４"
+  },
+  {
+    "row_num": 8,
+    "name": "第1橙龍(ヌイキリクレ)",
+    "landmark": "大雪山連峰の旭岳(2290m)",
+    "lat_original": 43.6850658,
+    "lng_original": 142.8063076,
+    "reverse_address": "MRP4+2G 日本、北海道東川町"
+  },
+  {
+    "row_num": 9,
+    "name": "第1赤麟(ヘヨイリエリ)",
+    "landmark": "",
+    "lat_original": 44.76801107,
+    "lng_original": 148.3248353,
+    "reverse_address": "8RPCQ89F+6W"
+  },
+  {
+    "row_num": 10,
+    "name": "第5白龍(ウグ・ヨルチ)",
+    "landmark": "大雪山(白雲岳山頂 2230m)",
+    "lat_original": 43.6850658,
+    "lng_original": 142.8063076,
+    "reverse_address": "MRP4+2G 日本、北海道東川町"
+  },
+  {
+    "row_num": 11,
+    "name": "第5赤龍(レエエオオン)",
+    "landmark": "",
+    "lat_original": 43.2203266,
+    "lng_original": 142.8634737,
+    "reverse_address": "6VC7+49 日本、北海道新得町"
+  },
+  {
+    "row_num": 12,
+    "name": "第8赤武(スエレン)",
+    "landmark": "",
+    "lat_original": 43.2203266,
+    "lng_original": 142.8634737,
+    "reverse_address": "6VC7+49 日本、北海道新得町"
+  },
+  {
+    "row_num": 13,
+    "name": "第8赤鳳(ヨイクイール)",
+    "landmark": "",
+    "lat_original": 43.2203266,
+    "lng_original": 136.5218898,
+    "reverse_address": "8QMR6GCC+4Q"
+  },
+  {
+    "row_num": 14,
+    "name": "第8赤麟(ヘウエオオガ)",
+    "landmark": "",
+    "lat_original": 43.11984877,
+    "lng_original": 141.7398797,
+    "reverse_address": "日本、〒068-0127 北海道岩見沢市栗沢町本町４８−３"
+  },
+  {
+    "row_num": 15,
+    "name": "第9白麟(ネオア・ユキ)",
+    "landmark": "龍神島最東端のエイタンノット岬",
+    "lat_original": 43.3853916,
+    "lng_original": 145.8173768,
+    "reverse_address": "日本、〒087-0165 北海道根室市納沙布２６"
+  },
+  {
+    "row_num": 16,
+    "name": "第5緑麟(ルエリキオン)",
+    "landmark": "慈恩(じおん)の滝の滝壺",
+    "lat_original": 33.26487793,
+    "lng_original": 131.0683965,
+    "reverse_address": "日本、〒879-4332 大分県玖珠郡玖珠町山浦６１８"
+  },
+  {
+    "row_num": 17,
+    "name": "第9赤鳳(イーオエヌ)",
+    "landmark": "",
+    "lat_original": 33.1589299,
+    "lng_original": 131.3611121,
+    "reverse_address": "5956+HC 日本、大分県由布市"
+  },
+  {
+    "row_num": 18,
+    "name": "第2赤鳳(ヤ・ヌエオオ)",
+    "landmark": "",
+    "lat_original": 35.6635113,
+    "lng_original": 138.6388879,
+    "reverse_address": "日本、〒406-0015 山梨県笛吹市春日居町鎮目１６７９−６"
+  },
+  {
+    "row_num": 19,
+    "name": "第3赤龍(ビエゲバ)",
+    "landmark": "",
+    "lat_original": 35.59411598,
+    "lng_original": 138.9374859,
+    "reverse_address": "HWVP+JX 日本、山梨県都留市"
+  },
+  {
+    "row_num": 20,
+    "name": "第5橙龍(ナケエグオ)",
+    "landmark": "明石山脈(白峰領) 布引山(2583m)",
+    "lat_original": 35.40880242,
+    "lng_original": 138.2579778,
+    "reverse_address": "8Q7WC755+G5"
+  },
+  {
+    "row_num": 21,
+    "name": "第7銀麟(フク・ヨエイ)",
+    "landmark": "昇仙峡(仙娥滝付近) 金櫻神社",
+    "lat_original": 35.7694028,
+    "lng_original": 138.5559021,
+    "reverse_address": "日本、〒400-1218 山梨県甲府市御岳町２３４７"
+  },
+  {
+    "row_num": 22,
+    "name": "第9白鳳(ピムデブケガ)",
+    "landmark": "明石山脈北岳(3193m)山頂",
+    "lat_original": 35.6747908,
+    "lng_original": 138.238854,
+    "reverse_address": "M6FQ+WG 日本、山梨県南アルプス市"
+  },
+  {
+    "row_num": 23,
+    "name": "第2白銀麟(フエオフイエ)",
+    "landmark": "東仙峡金山湖(弓掛川サイドの湖上部)",
+    "lat_original": 35.7835549,
+    "lng_original": 137.159365,
+    "reverse_address": "Q5M5+CP 日本、岐阜県下呂市"
+  },
+  {
+    "row_num": 24,
+    "name": "第8緑鳳(ヨエーイ)",
+    "landmark": "東仙峡金山湖の上流部",
+    "lat_original": 35.7835549,
+    "lng_original": 137.159365,
+    "reverse_address": "Q5M5+CP 日本、岐阜県下呂市"
+  },
+  {
+    "row_num": 25,
+    "name": "第3赤武(セレウヒルン)",
+    "landmark": "",
+    "lat_original": 34.60513673,
+    "lng_original": 139.3996,
+    "reverse_address": "J94X+3R 日本、東京都大島町"
+  },
+  {
+    "row_num": 26,
+    "name": "第7赤鳳(ヨエナル)",
+    "landmark": "",
+    "lat_original": 24.25509999,
+    "lng_original": 140.4916481,
+    "reverse_address": "7RP27F4R+2M"
+  },
+  {
+    "row_num": 27,
+    "name": "第7銀武(ヌエゲケルン)",
+    "landmark": "菅原神社境内の厳島神社の池",
+    "lat_original": 35.6764225,
+    "lng_original": 139.650027,
+    "reverse_address": "日本、〒168-0063 東京都杉並区和泉２丁目４５−３５"
+  },
+  {
+    "row_num": 28,
+    "name": "第2赤武(スエヘルエ)",
+    "landmark": "",
+    "lat_original": 32.8594427,
+    "lng_original": 130.7969149,
+    "reverse_address": "日本、〒861-3203 熊本県菊池郡菊陽町津久礼２１３５−１"
+  },
+  {
+    "row_num": 29,
+    "name": "第9赤武(セオドビエン)",
+    "landmark": "",
+    "lat_original": 32.8594427,
+    "lng_original": 130.7969149,
+    "reverse_address": "日本、〒861-3203 熊本県菊池郡菊陽町津久礼２１３５−１"
+  },
+  {
+    "row_num": 30,
+    "name": "第5黒鳳(ソイル)",
+    "landmark": "「石川護国神社」の境内の願掛けの五葉松に龍管が入力し、また魔界ナグは神社の拝殿内に開いている。",
+    "lat_original": 36.5597129,
+    "lng_original": 136.6644354,
+    "reverse_address": "日本、〒920-0935 石川県金沢市石引４丁目１８−１８"
+  },
+  {
+    "row_num": 31,
+    "name": "第6白銀武(ハエル・フイ)",
+    "landmark": "兼六園(霞ケ池)",
+    "lat_original": 36.5627194,
+    "lng_original": 136.6625434,
+    "reverse_address": "日本、〒920-0936 石川県金沢市兼六町１−２２"
+  },
+  {
+    "row_num": 32,
+    "name": "第1赤武(シエオアブン)",
+    "landmark": "",
+    "lat_original": 35.4913535,
+    "lng_original": 139.284143,
+    "reverse_address": "F7RM+GM 日本、神奈川県清川村"
+  },
+  {
+    "row_num": 33,
+    "name": "第3赤鳳(ヨオエオオル)",
+    "landmark": "",
+    "lat_original": 35.24099153,
+    "lng_original": 139.2170067,
+    "reverse_address": "66R8+9R 日本、神奈川県小田原市"
+  },
+  {
+    "row_num": 34,
+    "name": "第5赤鳳(ヨケルエピル)",
+    "landmark": "",
+    "lat_original": 35.4913535,
+    "lng_original": 139.284143,
+    "reverse_address": "F7RM+GM 日本、神奈川県清川村"
+  },
+  {
+    "row_num": 35,
+    "name": "第4赤鳳(ヨイオクル)",
+    "landmark": "",
+    "lat_original": 37.3834373,
+    "lng_original": 140.1832516,
+    "reverse_address": "95MM+98 日本、福島県郡山市"
+  },
+  {
+    "row_num": 36,
+    "name": "第6赤龍(レオピグエン)",
+    "landmark": "",
+    "lat_original": 37.3834373,
+    "lng_original": 140.1832516,
+    "reverse_address": "95MM+98 日本、福島県郡山市"
+  },
+  {
+    "row_num": 37,
+    "name": "第7赤武(ソケイウエオ)",
+    "landmark": "",
+    "lat_original": 37.88518301,
+    "lng_original": 141.9088865,
+    "reverse_address": "8R93VWP5+3H"
+  },
+  {
+    "row_num": 38,
+    "name": "第1緑龍(ヘクエヨルン)",
+    "landmark": "田沢湖北岸の湖底(御座石神社)",
+    "lat_original": 39.7516029,
+    "lng_original": 140.6505312,
+    "reverse_address": "日本、〒014-0602 秋田県仙北市西木町桧木内相内潟１"
+  },
+  {
+    "row_num": 39,
+    "name": "第3銀龍(カイクビオケ)",
+    "landmark": "田沢湖の湖底(御座石神社湖岸から200m沖合):【ヤエゲリア龍神】",
+    "lat_original": 39.74912515,
+    "lng_original": 140.6505442,
+    "reverse_address": "PMX2+M6 日本、秋田県仙北市"
+  },
+  {
+    "row_num": 40,
+    "name": "第2黄龍(ホフルキエイ)",
+    "landmark": "照葉峡(11個の滝の中で翡翠の滝に入力)",
+    "lat_original": 36.5605388,
+    "lng_original": 138.8799972,
+    "reverse_address": "日本、〒377-0807 群馬県吾妻郡東吾妻町泉沢糀屋"
+  },
+  {
+    "row_num": 41,
+    "name": "第6黄龍(ヒエコ・クエ)",
+    "landmark": "蛇喰(じゃばみ)渓谷のパーキングエリア付近",
+    "lat_original": 36.19693374,
+    "lng_original": 138.9936689,
+    "reverse_address": "日本、〒375-0046 群馬県藤岡市下日野２１９３"
+  },
+  {
+    "row_num": 42,
+    "name": "第4赤武(セピナエイ)",
+    "landmark": "",
+    "lat_original": 36.2193571,
+    "lng_original": 140.1832516,
+    "reverse_address": "日本、〒315-0151 茨城県石岡市須釜 こがさおおやま1663ー37"
+  },
+  {
+    "row_num": 43,
+    "name": "第8赤龍(レケイアゲア)",
+    "landmark": "",
+    "lat_original": 36.3753963,
+    "lng_original": 140.4538621,
+    "reverse_address": "日本、〒310-0033 茨城県水戸市常磐町１丁目３−３ 偕楽園"
+  },
+  {
+    "row_num": 44,
+    "name": "第2赤麟(フリオキオン)",
+    "landmark": "",
+    "lat_original": 31.00041739,
+    "lng_original": 126.6068425,
+    "reverse_address": "8Q382J24+5P"
+  },
+  {
+    "row_num": 45,
+    "name": "第5赤武(ソイオヌエ)",
+    "landmark": "",
+    "lat_original": 32.78041217,
+    "lng_original": 130.2672618,
+    "reverse_address": "日本、〒859-1317 長崎県雲仙市国見町土黒庚 普賢岳（ふげんだけ）生物群集保護林"
+  },
+  {
+    "row_num": 46,
+    "name": "第9銀鳳(フイルヌオナ)",
+    "landmark": "大瀬崎断崖の先端部",
+    "lat_original": 32.61263598,
+    "lng_original": 128.5983884,
+    "reverse_address": "8Q4CJH7X+39"
+  },
+  {
+    "row_num": 47,
+    "name": "第8黒麟(ルイク)",
+    "landmark": "「(米之宮)浅間(せんげん)神社」境内の御神木(夫婦木)に龍管が入力し、本殿の御身体に魔界ナグが開いている。",
+    "lat_original": 35.16142837,
+    "lng_original": 138.6571176,
+    "reverse_address": "日本、〒416-0906 静岡県富士市本市場４１６"
+  },
+  {
+    "row_num": 48,
+    "name": "第5金武(ガエロヤエル)",
+    "landmark": "足摺岬から南方300kmの海溝の底(深度4400m):【ヤエゲリア龍神】",
+    "lat_original": 30.22215919,
+    "lng_original": 132.973575,
+    "reverse_address": "8Q2J6XCF+VC"
+  },
+  {
+    "row_num": 49,
+    "name": "第8白銀鳳(ヌクイ・ビベ)",
+    "landmark": "足摺岬先端部(足摺灯台)",
+    "lat_original": 32.7241601,
+    "lng_original": 133.0202598,
+    "reverse_address": "日本、〒787-0315 高知県土佐清水市足摺岬１３４９"
+  },
+  {
+    "row_num": 50,
+    "name": "第2黒武(ツイン)",
+    "landmark": "「樂樂福(ささふく)神社」の白蛇神の社に龍管が入力されており、また本殿内部に魔界ナグが開いている。",
+    "lat_original": 35.3573161,
+    "lng_original": 133.4066618,
+    "reverse_address": "9C44+WM 日本、鳥取県伯耆町"
+  },
+  {
+    "row_num": 51,
+    "name": "第7赤麟(ホイエゲ)",
+    "landmark": "",
+    "lat_original": 35.3573161,
+    "lng_original": 133.4066618,
+    "reverse_address": "9C44+WM 日本、鳥取県伯耆町"
+  },
+  {
+    "row_num": 52,
+    "name": "第1赤龍(リユカルエル)",
+    "landmark": "",
+    "lat_original": 30.84555979,
+    "lng_original": 129.4306757,
+    "reverse_address": "8Q2FRCWJ+67"
+  },
+  {
+    "row_num": 53,
+    "name": "第6赤鳳(イエエアイア)",
+    "landmark": "",
+    "lat_original": 31.3911958,
+    "lng_original": 130.8778586,
+    "reverse_address": "日本、〒899-43325 鹿児島県霧島市国分中央３丁目２−４５−１１０５"
+  },
+  {
+    "row_num": 54,
+    "name": "第6赤麟(ホケカルイン)",
+    "landmark": "",
+    "lat_original": 31.3911958,
+    "lng_original": 130.8778586,
+    "reverse_address": "日本、〒899-43325 鹿児島県霧島市国分中央３丁目２−４５−１１０５"
+  },
+  {
+    "row_num": 55,
+    "name": "第8白銀麟(ケゴオヌセガ)",
+    "landmark": "伊勢神宮の内宮池",
+    "lat_original": 34.4550157,
+    "lng_original": 136.7251851,
+    "reverse_address": "日本、〒516-0023 三重県伊勢市宇治館町１"
+  },
+  {
+    "row_num": 56,
+    "name": "第9紫麟(ヘウエキルン)",
+    "landmark": "皇大神宮(伊雑宮: いざわのみや)の池",
+    "lat_original": 34.380181,
+    "lng_original": 136.8089441,
+    "reverse_address": "日本、〒517-0208 三重県志摩市磯部町上之郷３７４"
+  },
+  {
+    "row_num": 57,
+    "name": "第9青麟(ヨエヨイール)",
+    "landmark": "大王埼岬海岸の岩場",
+    "lat_original": 34.2760951,
+    "lng_original": 136.8995693,
+    "reverse_address": "日本、〒517-0603 三重県志摩市大王町波切５４"
+  },
+  {
+    "row_num": 58,
+    "name": "第1白銀鳳(ナエコフルン)",
+    "landmark": "平安神宮東神苑の栖鳳池",
+    "lat_original": 35.0160954,
+    "lng_original": 135.7840533,
+    "reverse_address": "日本、〒606-8341 京都府京都市左京区岡崎西天王町泰平閣 平安神宮庭園内"
+  },
+  {
+    "row_num": 59,
+    "name": "第1紫鳳(ベイルルイン)",
+    "landmark": "京都御所内の御内庭の池(反橋付近)",
+    "lat_original": 35.0255767,
+    "lng_original": 135.7632325,
+    "reverse_address": "日本、〒602-0881 京都府京都市上京区京都御苑京都御所・蛤御門"
+  },
+  {
+    "row_num": 60,
+    "name": "第1青龍(ヌーレヨイゴ)",
+    "landmark": "経ヶ岬(きょうがみさき)突端の岩場",
+    "lat_original": 35.7771183,
+    "lng_original": 135.2233915,
+    "reverse_address": "日本、〒627-0245 京都府京丹後市丹後町袖志 Q6GF+Q6"
+  },
+  {
+    "row_num": 61,
+    "name": "第2白麟(キエオブエオ)",
+    "landmark": "芦見谷川渓谷(地蔵山と竜ヶ岳の境)",
+    "lat_original": 35.0753086,
+    "lng_original": 135.6236864,
+    "reverse_address": "3JGF+4F 日本、京都府京都市"
+  },
+  {
+    "row_num": 62,
+    "name": "第4緑麟(レリノ・ヌイ)",
+    "landmark": "宝泉院(鶴亀庭園の池)",
+    "lat_original": 35.1212636,
+    "lng_original": 135.8341054,
+    "reverse_address": "日本、〒601-1241 京都府京都市左京区大原勝林院町６０１ 1241"
+  },
+  {
+    "row_num": 63,
+    "name": "第5銀武(ブオルケルン)",
+    "landmark": "伏見稲荷大社の周辺の谺(こだま)ヶ池",
+    "lat_original": 34.9676945,
+    "lng_original": 135.7791876,
+    "reverse_address": "日本、〒612-0805 京都府京都市伏見区深草開土口町４５"
+  },
+  {
+    "row_num": 64,
+    "name": "第7橙武(ルイケヒオリ)",
+    "landmark": "長老ヶ岳(959m)",
+    "lat_original": 35.3032772,
+    "lng_original": 135.4741822,
+    "reverse_address": "8F3F+8M 日本、京都府南丹市"
+  },
+  {
+    "row_num": 65,
+    "name": "第4黄龍(ヘキケー)",
+    "landmark": "阿瀬渓谷(坐禅の滝の滝壺)",
+    "lat_original": 35.4535556,
+    "lng_original": 134.6667602,
+    "reverse_address": "日本、〒669-5359 兵庫県豊岡市日高町羽尻 FM38+8Q"
+  },
+  {
+    "row_num": 66,
+    "name": "第6青武(テケエグエル)",
+    "landmark": "大引の鼻海岸線の岩場",
+    "lat_original": 35.6609184,
+    "lng_original": 134.6483973,
+    "reverse_address": "MJ6X+99 日本、兵庫県香美町"
+  },
+  {
+    "row_num": 67,
+    "name": "第8白龍(ニウグネキゲ)",
+    "landmark": "六甲山最高峰の山頂岩倉(931m)",
+    "lat_original": 34.7779857,
+    "lng_original": 135.2637084,
+    "reverse_address": "日本、〒657-0111 兵庫県神戸市東灘区本山町森７４８"
+  },
+  {
+    "row_num": 68,
+    "name": "第8銀武(ニーケ・ガク)",
+    "landmark": "天滝渓谷(滝から600m下流域)",
+    "lat_original": 34.6230658,
+    "lng_original": 138.8724468,
+    "reverse_address": "日本、〒415-0154 静岡県賀茂郡南伊豆町下流７１４"
+  },
+  {
+    "row_num": 69,
+    "name": "第1紫武(ヘイカナイレ)",
+    "landmark": "知床岬の突端の岩場",
+    "lat_original": 44.3440888,
+    "lng_original": 145.332628,
+    "reverse_address": "8RP788VM+J3"
+  },
+  {
+    "row_num": 70,
+    "name": "第1紫麟(ネクレ・ニエルリ)",
+    "landmark": "利尻山(1721m)の山頂",
+    "lat_original": 45.1805888,
+    "lng_original": 141.2411723,
+    "reverse_address": "56JR+6F 日本、北海道利尻富士町"
+  },
+  {
+    "row_num": 71,
+    "name": "第2金武(ガザジー)",
+    "landmark": "北海道神宮境内の池",
+    "lat_original": 43.054333,
+    "lng_original": 141.3077928,
+    "reverse_address": "日本、〒064-0959 北海道札幌市中央区宮ケ丘４７４"
+  },
+  {
+    "row_num": 72,
+    "name": "第2銀武(キエスアケギ)",
+    "landmark": "芦別岳(1726m)の山頂",
+    "lat_original": 43.2357465,
+    "lng_original": 142.2834814,
+    "reverse_address": "67PM+79 日本、北海道富良野市"
+  },
+  {
+    "row_num": 73,
+    "name": "第2青龍(クア)",
+    "landmark": "宗谷岬の突端の岩場(日本最北端)",
+    "lat_original": 45.5229095,
+    "lng_original": 141.9365885,
+    "reverse_address": "日本、〒098-6758 北海道稚内市宗谷岬３−３"
+  },
+  {
+    "row_num": 74,
+    "name": "第2黄麟(キーリ)",
+    "landmark": "層雲峡の大函(おおばこ)峡",
+    "lat_original": 43.6990317,
+    "lng_original": 143.0162765,
+    "reverse_address": "M2X8+JG 日本、北海道上川町"
+  },
+  {
+    "row_num": 75,
+    "name": "第4群青鳳(ヨエイヒケル)",
+    "landmark": "釧路川湿原(美留川合流点の下流500m)",
+    "lat_original": 43.1155344,
+    "lng_original": 144.4318361,
+    "reverse_address": "２-2101 北斗 釧路市 川上郡 北海道 084-0922 日本"
+  },
+  {
+    "row_num": 76,
+    "name": "第4銀龍(ナウエリ)",
+    "landmark": "摩周湖(中島: カムイシュ島)",
+    "lat_original": 43.5872284,
+    "lng_original": 144.5237617,
+    "reverse_address": "HGPF+VG 日本、北海道弟子屈町"
+  },
+  {
+    "row_num": 77,
+    "name": "第4青武(フエリン)",
+    "landmark": "地球岬の突端岩場",
+    "lat_original": 42.3018213,
+    "lng_original": 141.0018492,
+    "reverse_address": "日本、〒051-0003 北海道室蘭市母恋南町４丁目無番地"
+  },
+  {
+    "row_num": 78,
+    "name": "第5橙麟(ルアニーエ)",
+    "landmark": "雄阿寒岳(1370m)・阿寒湖",
+    "lat_original": 43.4539691,
+    "lng_original": 144.164555,
+    "reverse_address": "8RM6F537+HR"
+  },
+  {
+    "row_num": 79,
+    "name": "第5白鳳(ロヨゼコプル)",
+    "landmark": "日高山脈幌尻岳(2052m)の山頂",
+    "lat_original": 42.7194024,
+    "lng_original": 142.6828594,
+    "reverse_address": "8RJ4PM9M+Q4"
+  },
+  {
+    "row_num": 80,
+    "name": "第5緑武(ケオイリーケ)",
+    "landmark": "ウトナイ湖の湖底",
+    "lat_original": 42.6979507,
+    "lng_original": 141.7128318,
+    "reverse_address": "MPX7+54 日本、北海道苫小牧市"
+  },
+  {
+    "row_num": 81,
+    "name": "第5青鳳(プエリピオ)",
+    "landmark": "襟裳岬の突端の岩場(北海道最南端)",
+    "lat_original": 41.9246455,
+    "lng_original": 143.249249,
+    "reverse_address": "W6FX+VM 日本、北海道えりも町"
+  },
+  {
+    "row_num": 82,
+    "name": "第6白銀鳳(ビオルケグノ)",
+    "landmark": "然別湖(湖畔北西部の沢)",
+    "lat_original": 43.2722687,
+    "lng_original": 143.1181803,
+    "reverse_address": "74C9+W7 日本、北海道上士幌町"
+  },
+  {
+    "row_num": 83,
+    "name": "第7緑龍(ヒウゲイルア)",
+    "landmark": "パンケ沼の中央湖底",
+    "lat_original": 45.0334606,
+    "lng_original": 141.7157331,
+    "reverse_address": "2PM8+97 日本、北海道幌延町"
+  },
+  {
+    "row_num": 84,
+    "name": "第7青麟(フゲエフルン)",
+    "landmark": "白神岬の突端の岩場",
+    "lat_original": 41.39704,
+    "lng_original": 140.1972746,
+    "reverse_address": "日本、〒049-1524 北海道松前郡松前町白神６２９−１２"
+  },
+  {
+    "row_num": 85,
+    "name": "第7黄武(レーゲアオル)",
+    "landmark": "赤岩青巖(せいがん)峡の二つ岩の流域",
+    "lat_original": 44.0602545,
+    "lng_original": 144.2476533,
+    "reverse_address": "日本、〒093-0086 北海道網走市二ツ岩９８−２"
+  },
+  {
+    "row_num": 86,
+    "name": "第8金麟(ハオヨオ)",
+    "landmark": "屈斜路湖北岸(シケレペンベツ川河口付近)",
+    "lat_original": 43.6717602,
+    "lng_original": 144.2958312,
+    "reverse_address": "M7CW+P8 日本、北海道弟子屈町"
+  },
+  {
+    "row_num": 87,
+    "name": "第8青武(ツオイヒルイ)",
+    "landmark": "宮津弁天の岩場",
+    "lat_original": 35.535626,
+    "lng_original": 135.1956327,
+    "reverse_address": "日本、〒626-0024 京都府宮津市柳縄手３４５−１"
+  },
+  {
+    "row_num": 88,
+    "name": "第8青鳳(ヤフイリンオ)",
+    "landmark": "神威岬の先端部の岩場",
+    "lat_original": 45.0599852,
+    "lng_original": 142.5043414,
+    "reverse_address": "3G53+XP 日本、北海道枝幸町"
+  },
+  {
+    "row_num": 89,
+    "name": "第9緑鳳(ヨウゲギール)",
+    "landmark": "知床五湖の中の(三湖)",
+    "lat_original": 44.128406,
+    "lng_original": 145.0818705,
+    "reverse_address": "8RP743HJ+9P"
+  },
+  {
+    "row_num": 90,
+    "name": "第4青龍(ビーオバ)",
+    "landmark": "犬吠埼海岸の岩場",
+    "lat_original": 35.7080972,
+    "lng_original": 140.8692245,
+    "reverse_address": "日本、〒288-0012 千葉県銚子市犬吠埼９５７５−１ 犬吠埼"
+  },
+  {
+    "row_num": 91,
+    "name": "第5青麟(ラエリオ)",
+    "landmark": "房総半島最南端の野島崎の海岸",
+    "lat_original": 34.9004463,
+    "lng_original": 139.8881935,
+    "reverse_address": "日本、〒295-0102 千葉県南房総市白浜町白浜６２７−４１ 南房総国定公園 野島崎"
+  },
+  {
+    "row_num": 92,
+    "name": "第7青武(ツエリゲイン)",
+    "landmark": "大弁天島海岸の弁天岩:【ヤエゲリア龍神】",
+    "lat_original": 35.0907792,
+    "lng_original": 140.1099811,
+    "reverse_address": "日本、〒296-0004 千葉県鴨川市貝渚１３９"
+  },
+  {
+    "row_num": 93,
+    "name": "第7黄麟(ゴイウオ)",
+    "landmark": "梨沢渓谷の大滝の下流200m(黒瀬)",
+    "lat_original": 35.1797176,
+    "lng_original": 139.8994822,
+    "reverse_address": "日本、〒299-1614 千葉県富津市梨沢１２５４"
+  },
+  {
+    "row_num": 94,
+    "name": "第5青龍(ヒエグブルン)",
+    "landmark": "潮岬(しおのみさき)突端の岩場",
+    "lat_original": 33.4369373,
+    "lng_original": 135.761536,
+    "reverse_address": "日本、〒649-3502 和歌山県東牟婁郡串本町潮岬２８６５"
+  },
+  {
+    "row_num": 95,
+    "name": "第6青鳳(ユエケナリブ)",
+    "landmark": "友ヶ島の西海岸(アメダスの向いの海岸)",
+    "lat_original": 34.2820235,
+    "lng_original": 135.0125716,
+    "reverse_address": "72J7+R2 日本、和歌山県和歌山市"
+  },
+  {
+    "row_num": 96,
+    "name": "第7白鳳(スウニブオン)",
+    "landmark": "那智の大滝(133m)の滝壺",
+    "lat_original": 33.6753396,
+    "lng_original": 135.8876081,
+    "reverse_address": "MVGQ+42 日本、和歌山県那智勝浦町"
+  },
+  {
+    "row_num": 97,
+    "name": "第1青鳳(ヨオオラエラ)",
+    "landmark": "鶴御崎先端の岩場(九州最東端)",
+    "lat_original": 32.9323075,
+    "lng_original": 132.0836532,
+    "reverse_address": "日本、〒876-1312 大分県佐伯市鶴見大字梶寄浦５４９−２"
+  },
+  {
+    "row_num": 98,
+    "name": "第1黄麟(ギエオライラ)",
+    "landmark": "猿飛千壺(さるとびせんつぼ)峡の魔林峡",
+    "lat_original": 33.4317687,
+    "lng_original": 130.9986195,
+    "reverse_address": "日本、〒871-0702 大分県中津市山国町草本５４７−１"
+  },
+  {
+    "row_num": 99,
+    "name": "第3橙龍(クエヌエ)",
+    "landmark": "由布岳(1583m)",
+    "lat_original": 33.282333,
+    "lng_original": 131.3903704,
+    "reverse_address": "79JR+W4 日本、大分県由布市"
+  },
+  {
+    "row_num": 100,
+    "name": "第3白銀武(ヌリ・デキキ)",
+    "landmark": "金比羅鼻の周辺海岸岩石",
+    "lat_original": 33.6703739,
+    "lng_original": 131.6617351,
+    "reverse_address": "MMC6+4M 日本、大分県国東市"
+  },
+  {
+    "row_num": 101,
+    "name": "第8橙武(ナエレ)",
+    "landmark": "久住連山の中岳(1791m)・御池",
+    "lat_original": 33.1082158,
+    "lng_original": 131.2913574,
+    "reverse_address": "475R+7G 日本、大分県竹田市"
+  },
+  {
+    "row_num": 102,
+    "name": "第2黄鳳(テイゲー)",
+    "landmark": "摂津峡の八畳岩と第二キャンプ場の間付近",
+    "lat_original": 34.8824247,
+    "lng_original": 135.5859012,
+    "reverse_address": "日本、〒569-1051 大阪府高槻市原 VHMP+55"
+  },
+  {
+    "row_num": 103,
+    "name": "第5紫麟(クイピキオエ)",
+    "landmark": "住吉大社の池(太鼓橋から北側)",
+    "lat_original": 34.6125177,
+    "lng_original": 135.4922306,
+    "reverse_address": "日本、〒558-0045 大阪府大阪市住吉区住吉２丁目９−８９ 反橋"
+  },
+  {
+    "row_num": 104,
+    "name": "第1橙麟(リエオヌエル)",
+    "landmark": "大峰山脈の三上(さんじょう)ヶ岳(1719m)",
+    "lat_original": 34.7108399,
+    "lng_original": 135.7280599,
+    "reverse_address": "日本、〒630-0131 奈良県生駒市上町３"
+  },
+  {
+    "row_num": 105,
+    "name": "第2橙鳳(ネイグビル)",
+    "landmark": "伯母子(おばこ)岳(1344m)",
+    "lat_original": 34.0773701,
+    "lng_original": 135.6518267,
+    "reverse_address": "3MG2+WP 日本、奈良県十津川村"
+  },
+  {
+    "row_num": 106,
+    "name": "第2緑龍(フエ・ルクゴ)",
+    "landmark": "布目湖南岸の湖底",
+    "lat_original": 34.6910701,
+    "lng_original": 135.9794897,
+    "reverse_address": "日本、〒630-2205 奈良県山辺郡山添村桐山 MXQH+WH"
+  },
+  {
+    "row_num": 107,
+    "name": "第2群青武(フナニ・ガリ)",
+    "landmark": "橿原神宮の境内南の深田池",
+    "lat_original": 34.4857941,
+    "lng_original": 135.7857235,
+    "reverse_address": "日本、〒634-0821 奈良県橿原市西池尻町６３４"
+  },
+  {
+    "row_num": 108,
+    "name": "第3緑武(ケイルイア)",
+    "landmark": "潟沼(かたぬま: カルデラ湖)",
+    "lat_original": 38.7333927,
+    "lng_original": 140.7245253,
+    "reverse_address": "PPMF+9R 日本、宮城県大崎市"
+  },
+  {
+    "row_num": 109,
+    "name": "第3青龍(ヤエル)",
+    "landmark": "金華山島の最東端の海岸の岩場",
+    "lat_original": 38.2971306,
+    "lng_original": 141.5713429,
+    "reverse_address": "7HWC+VG 日本、宮城県石巻市"
+  },
+  {
+    "row_num": 110,
+    "name": "第9白銀鳳(ヒリンニキリ)",
+    "landmark": "月山池(がっさんいけ)",
+    "lat_original": 38.2615666,
+    "lng_original": 140.7492248,
+    "reverse_address": "7P6X+JM 日本、宮城県仙台市"
+  },
+  {
+    "row_num": 111,
+    "name": "第1白武(マヨベフヌユ)",
+    "landmark": "高千穂渓谷(真名井の滝)五ヶ瀬川源流点",
+    "lat_original": 32.7024539,
+    "lng_original": 131.300921,
+    "reverse_address": "日本、〒882-1103 宮崎県西臼杵郡高千穂町向山６０"
+  },
+  {
+    "row_num": 112,
+    "name": "第2銀龍(ギエキニリヨ)",
+    "landmark": "おせりの滝(三段滝)の滝壺",
+    "lat_original": 32.6834182,
+    "lng_original": 131.3237979,
+    "reverse_address": "日本、〒882-0401 宮崎県西臼杵郡日之影町七折 M8MF+9G"
+  },
+  {
+    "row_num": 113,
+    "name": "第4金鳳(ヒクイヌオオ)",
+    "landmark": "鹿川(ししがわ)渓谷の滝壺",
+    "lat_original": 32.7041387,
+    "lng_original": 131.4778182,
+    "reverse_address": "日本、〒882-0231 宮崎県延岡市北方町上鹿川申756"
+  },
+  {
+    "row_num": 114,
+    "name": "第7青龍(ベールキエゴ)",
+    "landmark": "都井岬の突端の岩場",
+    "lat_original": 31.3659857,
+    "lng_original": 131.332677,
+    "reverse_address": "日本、〒888-0221 宮崎県串間市大納４２−３ 都井岬"
+  },
+  {
+    "row_num": 115,
+    "name": "第2橙武(レーヌヨエル)",
+    "landmark": "白木峰(しらきがみね: 1596m)",
+    "lat_original": 36.4155846,
+    "lng_original": 137.1121349,
+    "reverse_address": "C486+6V 日本、富山県富山市"
+  },
+  {
+    "row_num": 116,
+    "name": "第2緑鳳(ヘオウル)",
+    "landmark": "ミクリガ池(2405m) 立山連峰",
+    "lat_original": 36.5880033,
+    "lng_original": 137.5978439,
+    "reverse_address": "HHQX+64 日本、富山県立山町"
+  },
+  {
+    "row_num": 117,
+    "name": "第4橙麟(レキエヌエリ)",
+    "landmark": "大日連峰の大日岳(2501m)",
+    "lat_original": 36.5998161,
+    "lng_original": 137.5492415,
+    "reverse_address": "HGXX+WM 日本、富山県立山町"
+  },
+  {
+    "row_num": 118,
+    "name": "第7白銀麟(クエオアオイ)",
+    "landmark": "北アルプス薬師岳(2926m)の山頂",
+    "lat_original": 36.4692771,
+    "lng_original": 137.5449941,
+    "reverse_address": "FG9V+PX 日本、富山県富山市"
+  },
+  {
+    "row_num": 119,
+    "name": "第7白麟(ネケコ・ナゲ)",
+    "landmark": "黒部渓谷の下廊下(白竜峡)",
+    "lat_original": 36.6093679,
+    "lng_original": 137.6870664,
+    "reverse_address": "8Q8VJM5P+PR"
+  },
+  {
+    "row_num": 120,
+    "name": "第3青麟(クアケアギゼ)",
+    "landmark": "俵島の柱状節理海岸",
+    "lat_original": 34.3925377,
+    "lng_original": 130.9333,
+    "reverse_address": "日本、〒759-4623 山口県長門市油谷向津具下 9WVM+37"
+  },
+  {
+    "row_num": 121,
+    "name": "第5橙武(レオイオエ)",
+    "landmark": "十種(とくさ)ヶ峰(989m)",
+    "lat_original": 34.4519938,
+    "lng_original": 131.6958157,
+    "reverse_address": "日本、〒759-1602 山口県山口市阿東嘉年下１５０５−１"
+  },
+  {
+    "row_num": 122,
+    "name": "第5紫龍(グアコヒール)",
+    "landmark": "山口大神宮(内宮: 西のお伊勢様)の池",
+    "lat_original": 34.1847727,
+    "lng_original": 131.4680607,
+    "reverse_address": "日本、〒753-0071 山口県山口市滝町４−４"
+  },
+  {
+    "row_num": 123,
+    "name": "第8青龍(ヘエエヒアル)",
+    "landmark": "金ノ弦(かねのつる)岬の灯台の岩場",
+    "lat_original": 33.9319897,
+    "lng_original": 131.2664247,
+    "reverse_address": "日本、〒755-0006 山口県宇部市岬町３丁目１３−５５"
+  },
+  {
+    "row_num": 124,
+    "name": "第9黄麟(コエギケーナ)",
+    "landmark": "寂地(じゃくち)峡の龍頭の滝",
+    "lat_original": 34.4301094,
+    "lng_original": 132.0532856,
+    "reverse_address": "日本、〒740-0901 山口県岩国市錦町宇佐 竜ヶ岳"
+  },
+  {
+    "row_num": 125,
+    "name": "第5白麟(ニエガ・ケケ)",
+    "landmark": "鳥海山(出羽富士)山頂(2236m)",
+    "lat_original": 39.0988592,
+    "lng_original": 140.0440705,
+    "reverse_address": "32XV+GJ 日本、山形県遊佐町"
+  },
+  {
+    "row_num": 126,
+    "name": "第8群青鳳(ナエオイーギ)",
+    "landmark": "赤芝峡眺望台(JR鉄橋眼下付近)",
+    "lat_original": 38.0784284,
+    "lng_original": 139.7081372,
+    "reverse_address": "3PH5+97 日本、山形県小国町"
+  },
+  {
+    "row_num": 127,
+    "name": "第2白銀武(フェケイ)",
+    "landmark": "山中湖(富士五湖)湖岸(鯨の腹部)から200m沖",
+    "lat_original": 35.4185515,
+    "lng_original": 138.8774803,
+    "reverse_address": "CV9G+CX 日本、山梨県山中湖村"
+  },
+  {
+    "row_num": 128,
+    "name": "第2緑麟(レーヨヒルン)",
+    "landmark": "精進湖(富士五湖の一つ)の北西湖岸",
+    "lat_original": 35.4901675,
+    "lng_original": 138.6075698,
+    "reverse_address": "日本、〒401-0336 山梨県南都留郡富士河口湖町精進 FJQ5+X7"
+  },
+  {
+    "row_num": 129,
+    "name": "第4黄鳳(ツエケオゲイ)",
+    "landmark": "西沢渓谷の七つ釜五段の滝の真ん中の滝壺",
+    "lat_original": 35.8646074,
+    "lng_original": 138.7317212,
+    "reverse_address": "VP7J+RM 日本、山梨県山梨市"
+  },
+  {
+    "row_num": 130,
+    "name": "第5白銀鳳(ベーテカ)",
+    "landmark": "農鳥岳(3026m)の山頂",
+    "lat_original": 35.6250432,
+    "lng_original": 138.2297251,
+    "reverse_address": "J6GH+2V 日本、山梨県早川町"
+  },
+  {
+    "row_num": 131,
+    "name": "第3群青鳳(パエルヤ)",
+    "landmark": "付知(つけち)峡不動滝の滝壺",
+    "lat_original": 35.6975718,
+    "lng_original": 137.4420018,
+    "reverse_address": "日本、〒508-0351 岐阜県中津川市付知町６−３９"
+  },
+  {
+    "row_num": 132,
+    "name": "第6白武(アタギシオナ)",
+    "landmark": "飛騨山脈穂高岳(3190m)の山頂:【ヤエゲリア龍神】",
+    "lat_original": 36.3308832,
+    "lng_original": 137.5961635,
+    "reverse_address": "8Q8V8HJW+9F"
+  },
+  {
+    "row_num": 133,
+    "name": "第8緑武(ゲギエヌエネ)",
+    "landmark": "伊自良湖(人工溜池)",
+    "lat_original": 35.564358,
+    "lng_original": 136.7028349,
+    "reverse_address": "HP73+P4 日本、岐阜県山県市"
+  },
+  {
+    "row_num": 134,
+    "name": "第9白武(グウイ・クオ)",
+    "landmark": "山乗渓谷の不動滝(20m)の滝壺",
+    "lat_original": 35.2490046,
+    "lng_original": 133.7916718,
+    "reverse_address": "6QXR+JM 日本、岡山県真庭市"
+  },
+  {
+    "row_num": 135,
+    "name": "第2青鳳(ヨイウオヒレ)",
+    "landmark": "魹(とど)ヶ崎の岩場(本州最東端)",
+    "lat_original": 39.5455706,
+    "lng_original": 142.0712364,
+    "reverse_address": "日本、〒027-0111 岩手県宮古市重茂４６"
+  },
+  {
+    "row_num": 136,
+    "name": "第3白銀鳳(ダウギゲルジ)",
+    "landmark": "岩洞湖(レストハウスの北対岸周辺)",
+    "lat_original": 39.8278685,
+    "lng_original": 141.3639107,
+    "reverse_address": "日本、〒028-2711 岩手県盛岡市薮川外山２４−１２"
+  },
+  {
+    "row_num": 137,
+    "name": "第3白龍(シジキルチニ)",
+    "landmark": "安家(アッカ)鍾乳洞",
+    "lat_original": 39.9600811,
+    "lng_original": 141.6799654,
+    "reverse_address": "XM6H+2X 日本、岩手県岩泉町"
+  },
+  {
+    "row_num": 138,
+    "name": "第4群青龍(ナイラ)",
+    "landmark": "達谷窟(たっこくのいわや)の池",
+    "lat_original": 38.9682504,
+    "lng_original": 141.0582787,
+    "reverse_address": "日本、〒029-4102 岩手県西磐井郡平泉町平泉北沢１６−４"
+  },
+  {
+    "row_num": 139,
+    "name": "第6白龍(ゾンヤワルネ)",
+    "landmark": "八幡平山頂(1614m)",
+    "lat_original": 39.9577891,
+    "lng_original": 140.8541351,
+    "reverse_address": "XV53+4M 日本、岩手県八幡平市"
+  },
+  {
+    "row_num": 140,
+    "name": "第8緑麟(ルエガレイオ)",
+    "landmark": "八幡沼(標高1560m)の湿地沼",
+    "lat_original": 39.9561754,
+    "lng_original": 140.8620834,
+    "reverse_address": "XV46+FR 日本、岩手県八幡平市"
+  },
+  {
+    "row_num": 141,
+    "name": "第8黄武(ラエアケール)",
+    "landmark": "龍泉洞(第3地底湖の中)",
+    "lat_original": 39.8626061,
+    "lng_original": 141.7920245,
+    "reverse_address": "日本、〒027-0501 岩手県下閉伊郡岩泉町岩泉神成１２"
+  },
+  {
+    "row_num": 142,
+    "name": "第7緑武(ケールニーエ)",
+    "landmark": "龍頭(りゅうず)ヶ滝(雄滝)の滝壺",
+    "lat_original": 35.4144995,
+    "lng_original": 133.0094462,
+    "reverse_address": "日本、〒699-0201 島根県松江市玉湯町玉造１０３５"
+  },
+  {
+    "row_num": 143,
+    "name": "第5緑鳳(ヤイガイーア)",
+    "landmark": "神龍湖の湖底(帝釈峡)",
+    "lat_original": 34.8446705,
+    "lng_original": 133.2252777,
+    "reverse_address": "日本、〒729-5132 広島県神石郡神石高原町永野５０５７−１２"
+  },
+  {
+    "row_num": 144,
+    "name": "第5黄龍(フエケール)",
+    "landmark": "三段峡(黒淵)",
+    "lat_original": 34.6001379,
+    "lng_original": 132.2076084,
+    "reverse_address": "日本、〒731-3813 広島県山県郡安芸太田町柴木１７３４−１"
+  },
+  {
+    "row_num": 145,
+    "name": "第3白銀龍(プエキリア・グオ)",
+    "landmark": "山系中腹の岩峰群の龍神岩",
+    "lat_original": 34.0700223,
+    "lng_original": 134.5274724,
+    "reverse_address": "3GCG+2X 日本、徳島県徳島市"
+  },
+  {
+    "row_num": 146,
+    "name": "第4群青武(フエオラリガ)",
+    "landmark": "大歩危(おおぼけ)峡(大歩危エメラルド)",
+    "lat_original": 33.893267,
+    "lng_original": 133.7569797,
+    "reverse_address": "日本、〒779-5451 徳島県三好市山城町西宇第2大歩危橋"
+  },
+  {
+    "row_num": 147,
+    "name": "第5白銀麟(グエオケキア)",
+    "landmark": "殿川内(とのかわち)渓谷(百間滝の500m上流部)",
+    "lat_original": 33.9113162,
+    "lng_original": 134.3684522,
+    "reverse_address": "W969+G9 日本、徳島県上勝町"
+  },
+  {
+    "row_num": 148,
+    "name": "第1青麟(ヨエレガイア)",
+    "landmark": "伊方半島の佐田岬の突端岩場(四国最西端)",
+    "lat_original": 33.343022,
+    "lng_original": 132.0149366,
+    "reverse_address": "日本、〒796-0823 愛媛県西宇和郡伊方町正野２９３５"
+  },
+  {
+    "row_num": 149,
+    "name": "第6黄鳳(タキイナエレ)",
+    "landmark": "鈍川(にぶかわ)渓谷のもみじの道付近の岩場",
+    "lat_original": 33.9847264,
+    "lng_original": 132.940399,
+    "reverse_address": "日本、〒794-0121 愛媛県今治市玉川町鈍川甲２１８−１"
+  },
+  {
+    "row_num": 150,
+    "name": "第8白武(ヨエアエエ・オオ)",
+    "landmark": "四国カルスト五段高原地下の鍾乳洞内部(地下200m)",
+    "lat_original": 33.4764746,
+    "lng_original": 132.9844879,
+    "reverse_address": "FXGM+HQ 日本、愛媛県久万高原町"
+  },
+  {
+    "row_num": 151,
+    "name": "第3黄麟(ケイケイール)",
+    "landmark": "羽左(はざ)の窪(くぼ)峡",
+    "lat_original": 35.3116492,
+    "lng_original": 136.9425693,
+    "reverse_address": "日本、〒485-0009 愛知県小牧市久保３３"
+  },
+  {
+    "row_num": 152,
+    "name": "第5黄武(リーウネガ)",
+    "landmark": "大滝渓谷の王滝橋の近辺",
+    "lat_original": 35.0675593,
+    "lng_original": 137.2429624,
+    "reverse_address": "日本、〒444-2203 愛知県豊田市豊松町澤尻１８"
+  },
+  {
+    "row_num": 153,
+    "name": "第7白銀鳳(ヤイヨエズロ)",
+    "landmark": "羽豆岬灯台の下の岩場",
+    "lat_original": 34.6955294,
+    "lng_original": 136.9722806,
+    "reverse_address": "日本、〒470-3503 愛知県知多郡南知多町師崎明神山２"
+  },
+  {
+    "row_num": 154,
+    "name": "第8白麟(ケイエ・ネイ)",
+    "landmark": "茶臼山の山頂(1416m)",
+    "lat_original": 34.9103096,
+    "lng_original": 137.514181,
+    "reverse_address": "日本、〒441-1302 愛知県新城市富永四条 茶臼山駅"
+  },
+  {
+    "row_num": 155,
+    "name": "第9青鳳(ピグアオイ)",
+    "landmark": "伊良湖岬(灯台)の海岸の岩場",
+    "lat_original": 34.5794465,
+    "lng_original": 137.016122,
+    "reverse_address": "日本、〒441-3624 愛知県田原市伊良湖町古山２８１４−３８"
+  },
+  {
+    "row_num": 156,
+    "name": "第1青武(テフオニーレ)",
+    "landmark": "判官舟かくしの海岸岩場(角田灯台)",
+    "lat_original": 37.7935005,
+    "lng_original": 138.8200339,
+    "reverse_address": "日本、〒953-0011 新潟県新潟市西蒲区角田浜４−１"
+  },
+  {
+    "row_num": 157,
+    "name": "第4青麟(ケールイ)",
+    "landmark": "佐渡の弾埼岬の海岸淵",
+    "lat_original": 38.0183025,
+    "lng_original": 138.3681401,
+    "reverse_address": "日本、〒952-1209 新潟県佐渡市千種 397G+PH"
+  },
+  {
+    "row_num": 158,
+    "name": "第5白銀龍(ゼデワナズギ)",
+    "landmark": "たきがしら湿原の旧湿地帯",
+    "lat_original": 37.5586864,
+    "lng_original": 139.5172215,
+    "reverse_address": "日本、〒959-4515 新潟県東蒲原郡阿賀町七名甲3267-1乙68 新潟県たきがしら湿原"
+  },
+  {
+    "row_num": 159,
+    "name": "第6緑武(アキイヌイ)",
+    "landmark": "瓢湖(ひょうこ)",
+    "lat_original": 37.8383791,
+    "lng_original": 139.2374523,
+    "reverse_address": "日本、〒959-2013 新潟県阿賀野市水原３１３−１ 瓢湖水きん公園"
+  },
+  {
+    "row_num": 160,
+    "name": "第6黄麟(カエコケゲル)",
+    "landmark": "清津峡の柱状節理の近辺",
+    "lat_original": 36.9615716,
+    "lng_original": 138.7573637,
+    "reverse_address": "XQ64+JW 日本、新潟県十日町市"
+  },
+  {
+    "row_num": 161,
+    "name": "第6群青武(ヘウヌイール)",
+    "landmark": "八丈島の三根岬の突端の岩場",
+    "lat_original": 33.1246205,
+    "lng_original": 139.7984421,
+    "reverse_address": "日本、〒100-1511 東京都八丈町三根４８７２"
+  },
+  {
+    "row_num": 162,
+    "name": "第6銀鳳(クイオバエル)",
+    "landmark": "沖ノ鳥島岩礁",
+    "lat_original": 20.4255723,
+    "lng_original": 136.0810829,
+    "reverse_address": "日本、〒100-2100 東京都小笠原村沖ノ鳥島２番地"
+  },
+  {
+    "row_num": 163,
+    "name": "第7金麟(ノエオニルイ)",
+    "landmark": "皇居東御苑の二の丸庭園の池",
+    "lat_original": 35.6876106,
+    "lng_original": 139.7589623,
+    "reverse_address": "日本、〒100-0001 東京都千代田区千代田１−１"
+  },
+  {
+    "row_num": 164,
+    "name": "第8青麟(ヤオベ)",
+    "landmark": "千両池の海岸岩場",
+    "lat_original": 34.1897343,
+    "lng_original": 139.1207985,
+    "reverse_address": "日本、〒100-0601 東京都神津島村葱の場６８８"
+  },
+  {
+    "row_num": 165,
+    "name": "第9白銀龍(ヌブイ・ハオ)",
+    "landmark": "西海岸(玉の浜)から1km沖合の海底岩峰",
+    "lat_original": 34.73,
+    "lng_original": 139.35,
+    "reverse_address": "P9H2+X2 日本、東京都大島町"
+  },
+  {
+    "row_num": 166,
+    "name": "第5白武(テウルエオリ)",
+    "landmark": "華厳の滝(97m)の滝壺",
+    "lat_original": 36.7380893,
+    "lng_original": 139.501941,
+    "reverse_address": "日本、〒321-1661 栃木県日光市中宮祠２４７９−２ 華厳滝"
+  },
+  {
+    "row_num": 167,
+    "name": "第7緑麟(ヌビエリゲ)",
+    "landmark": "湯ノ湖(湯滝の上の湖畔)",
+    "lat_original": 36.795418,
+    "lng_original": 139.428549,
+    "reverse_address": "日本、〒321-1662 栃木県日光市湯元２４９９"
+  },
+  {
+    "row_num": 168,
+    "name": "第7群青龍(ヌキアイ)",
+    "landmark": "おしらじの滝の滝壺(おしらじブルー)",
+    "lat_original": 36.9220904,
+    "lng_original": 139.8266442,
+    "reverse_address": "WRCG+RM 日本、栃木県矢板市"
+  },
+  {
+    "row_num": 169,
+    "name": "第9橙麟(ルエガヒエイ)",
+    "landmark": "那須岳(=茶臼岳: 1915m)",
+    "lat_original": 37.1426503,
+    "lng_original": 139.9552878,
+    "reverse_address": "4XV4+34 日本、栃木県那須塩原市"
+  },
+  {
+    "row_num": 170,
+    "name": "第2銀麟(ニオ・ヌイヨ)",
+    "landmark": "神山島(岩礁)那覇港の北西4km:【ヤエゲリア龍神】",
+    "lat_original": 26.2372576,
+    "lng_original": 127.6732489,
+    "reverse_address": "日本、〒900-0001 沖縄県那覇市港町１丁目２１−７"
+  },
+  {
+    "row_num": 171,
+    "name": "第3白武(ノイグフエリ)",
+    "landmark": "保良泉鍾乳洞の突き当たり(海岸線から3km地点の海底)",
+    "lat_original": 24.73,
+    "lng_original": 125.52,
+    "reverse_address": "PGJ9+2X 日本、沖縄県宮古島市"
+  },
+  {
+    "row_num": 172,
+    "name": "第4白銀鳳(デジ・ガガズ)",
+    "landmark": "石垣島鍾乳洞の内部(突き当り)",
+    "lat_original": 24.3617425,
+    "lng_original": 124.1544657,
+    "reverse_address": "日本、〒907-0023 沖縄県石垣市石垣1666番地"
+  },
+  {
+    "row_num": 173,
+    "name": "第4白麟(ヌビエグ)",
+    "landmark": "西崎(イリザキ)の龍神島最西端のトゥイシ岩礁",
+    "lat_original": 26.1433079,
+    "lng_original": 127.6613825,
+    "reverse_address": "日本、〒901-0305 沖縄県糸満市西崎２丁目１８−８"
+  },
+  {
+    "row_num": 174,
+    "name": "第7紫麟(ルワナネメ)",
+    "landmark": "赤丸岬の突端の岩島",
+    "lat_original": 26.7457675,
+    "lng_original": 128.1531653,
+    "reverse_address": "日本、〒905-1411 沖縄県国頭郡国頭村辺土名 P5W3+68"
+  },
+  {
+    "row_num": 175,
+    "name": "第3黄龍(ビエオライン)",
+    "landmark": "菊池渓谷(広河原流域)の瀬壺",
+    "lat_original": 33.0008087,
+    "lng_original": 130.9508721,
+    "reverse_address": "日本、〒861-1441 熊本県菊池市原 2X22+C9"
+  },
+  {
+    "row_num": 176,
+    "name": "第4白鳳(ゾシゲワエイ)",
+    "landmark": "阿蘇中岳(1506m)の第1火口",
+    "lat_original": 32.8837955,
+    "lng_original": 131.0965084,
+    "reverse_address": "V3MW+GJ 日本、熊本県阿蘇市"
+  },
+  {
+    "row_num": 177,
+    "name": "第4緑龍(フイオナルス)",
+    "landmark": "幣立神宮の御手洗の池",
+    "lat_original": 32.6871196,
+    "lng_original": 131.1357554,
+    "reverse_address": "日本、〒861-3905 熊本県上益城郡山都町大野７１２"
+  },
+  {
+    "row_num": 178,
+    "name": "第6白銀麟(テソケ・ジデ)",
+    "landmark": "仰(のけ)烏帽子山(1302m)の山頂",
+    "lat_original": 32.8739177,
+    "lng_original": 131.057862,
+    "reverse_address": "V3F5+H4 日本、熊本県南阿蘇村"
+  },
+  {
+    "row_num": 179,
+    "name": "第6白麟(ルンチゼテラ)",
+    "landmark": "(阿蘇)根子(ネコ)岳山頂(1433m)",
+    "lat_original": 32.8835183,
+    "lng_original": 131.1443493,
+    "reverse_address": "V4MV+CP 日本、熊本県高森町"
+  },
+  {
+    "row_num": 180,
+    "name": "第2白銀龍(デシトヌエオ)",
+    "landmark": "綿ケ滝(わたがたき)の滝壺",
+    "lat_original": 36.3408006,
+    "lng_original": 136.6353767,
+    "reverse_address": "日本、〒920-2342 石川県白山市下吉谷町１"
+  },
+  {
+    "row_num": 181,
+    "name": "第7銀龍(フナゲエビア)",
+    "landmark": "日本海の海底鍾乳洞(海面下400m)大和堆中央",
+    "lat_original": 39.0,
+    "lng_original": 135.0,
+    "reverse_address": "8QFQ2222+22"
+  },
+  {
+    "row_num": 182,
+    "name": "第9銀武(フエフエオヤ)",
+    "landmark": "能登半島珠洲岬(金剛崎)聖域の岬",
+    "lat_original": 37.5156257,
+    "lng_original": 137.3461028,
+    "reverse_address": "G88W+7C 日本、石川県珠洲市"
+  },
+  {
+    "row_num": 183,
+    "name": "第6橙麟(ルーキケヨル)",
+    "landmark": "箱根山(1438m)・芦ノ湖",
+    "lat_original": 35.2333,
+    "lng_original": 139.0208,
+    "reverse_address": "日本、〒250-0522 神奈川県足柄下郡箱根町元箱根 62MC+98"
+  },
+  {
+    "row_num": 184,
+    "name": "第9青武(クエ)",
+    "landmark": "真鶴半島先端の三ツ石の岩場",
+    "lat_original": 35.1374606,
+    "lng_original": 139.1636448,
+    "reverse_address": "45P7+XF 日本、神奈川県真鶴町"
+  },
+  {
+    "row_num": 185,
+    "name": "第4橙武(レイネヒエン)",
+    "landmark": "赤兎山(1628m)・赤池湿原",
+    "lat_original": 36.0675701,
+    "lng_original": 136.6618493,
+    "reverse_address": "3M96+2P 日本、福井県大野市"
+  },
+  {
+    "row_num": 186,
+    "name": "第5銀麟(コイヒケオル)",
+    "landmark": "九頭竜湖の中央南岸部(県道230号線側)",
+    "lat_original": 35.8383787,
+    "lng_original": 136.6246598,
+    "reverse_address": "日本、〒912-0000 福井県大野市 県道230号"
+  },
+  {
+    "row_num": 187,
+    "name": "第5青武(チエイル)",
+    "landmark": "門ヶ崎の突端の岩場",
+    "lat_original": 35.7346385,
+    "lng_original": 135.974704,
+    "reverse_address": "日本、〒919-1279 福井県敦賀市白木１丁目４０４−１"
+  },
+  {
+    "row_num": 188,
+    "name": "第9青龍(ギア・ナイル)",
+    "landmark": "越前海岸の岩場",
+    "lat_original": 35.9816516,
+    "lng_original": 135.9583014,
+    "reverse_address": "XXJ5+M8 日本、福井県越前町"
+  },
+  {
+    "row_num": 189,
+    "name": "第1紫龍(リーキシルゴ)",
+    "landmark": "水天宮総本宮の境内の池",
+    "lat_original": 33.3203915,
+    "lng_original": 130.496016,
+    "reverse_address": "日本、〒830-0025 福岡県久留米市瀬下町２６５−１"
+  },
+  {
+    "row_num": 190,
+    "name": "第4銀武(ヌネア・ドブ)",
+    "landmark": "太宰府天満宮の菖蒲池",
+    "lat_original": 33.5202587,
+    "lng_original": 130.5353648,
+    "reverse_address": "日本、〒818-0117 福岡県太宰府市宰府４丁目７"
+  },
+  {
+    "row_num": 191,
+    "name": "第4青鳳(ヤオクエ)",
+    "landmark": "部埼(へさき)灯台(九州最北東端)の海岸",
+    "lat_original": 33.9593936,
+    "lng_original": 131.0229579,
+    "reverse_address": "X25F+Q5 日本、福岡県北九州市"
+  },
+  {
+    "row_num": 192,
+    "name": "第9紫武(フエイビカイ)",
+    "landmark": "地島の龍神様の祠(ほこら)海岸",
+    "lat_original": 33.9015719,
+    "lng_original": 130.4999942,
+    "reverse_address": "日本、〒811-3511 福岡県宗像市地島４２８"
+  },
+  {
+    "row_num": 193,
+    "name": "第3緑麟(ルイヒケ)",
+    "landmark": "五色沼湖沼群(瑠璃沼)",
+    "lat_original": 37.6508749,
+    "lng_original": 140.0732012,
+    "reverse_address": "M32F+87 日本、福島県北塩原村"
+  },
+  {
+    "row_num": 194,
+    "name": "第3黄鳳(テーコヒーリ)",
+    "landmark": "滝川渓谷のおぼろ滝の滝壺",
+    "lat_original": 36.8179186,
+    "lng_original": 140.4680965,
+    "reverse_address": "日本、〒963-5114 福島県東白川郡矢祭町大ぬかり２３"
+  },
+  {
+    "row_num": 195,
+    "name": "第4白武(ブエアオイ・ゲア)",
+    "landmark": "大津岐川(小ヨッピ沢)の源流点湿地",
+    "lat_original": 37.04571807,
+    "lng_original": 139.289858,
+    "reverse_address": "27WQ+7W 日本、福島県檜枝岐村"
+  },
+  {
+    "row_num": 196,
+    "name": "第6紫鳳(ホエボニオル)",
+    "landmark": "摺上川渓谷の滑滝(なめたき)の滝壺",
+    "lat_original": 37.8934263,
+    "lng_original": 140.4342222,
+    "reverse_address": "日本、〒960-0271 福島県福島市飯坂町茂庭 蝉狩野山２５"
+  },
+  {
+    "row_num": 197,
+    "name": "第6緑鳳(ヌーオイイ)",
+    "landmark": "尾瀬沼(1660m)",
+    "lat_original": 36.9272362,
+    "lng_original": 139.3018896,
+    "reverse_address": "日本、〒967-0531 福島県南会津郡檜枝岐村燧ケ岳尾瀬沼"
+  },
+  {
+    "row_num": 198,
+    "name": "第6銀龍(ヌオ・ユオベ)",
+    "landmark": "三条の滝(100m)の滝壺",
+    "lat_original": 36.965533,
+    "lng_original": 139.250086,
+    "reverse_address": "X782+62 日本、福島県檜枝岐村"
+  },
+  {
+    "row_num": 199,
+    "name": "第7橙麟(ルアゲイル)",
+    "landmark": "安達太良連峰北端の鬼面山(1482m)",
+    "lat_original": 37.6211223,
+    "lng_original": 140.2878615,
+    "reverse_address": "J7CQ+C4 日本、福島県郡山市"
+  },
+  {
+    "row_num": 200,
+    "name": "第7青鳳(フ・へへル)",
+    "landmark": "塩屋埼灯台の海岸岩場",
+    "lat_original": 36.9950265,
+    "lng_original": 140.9814762,
+    "reverse_address": "日本、〒970-0223 福島県いわき市平薄磯宿崎３４"
+  },
+  {
+    "row_num": 201,
+    "name": "第8白銀武(ヨビエオーレ)",
+    "landmark": "猪苗代湖(西湖岸)田面浜付近",
+    "lat_original": 37.52361,
+    "lng_original": 140.0470022,
+    "reverse_address": "日本、〒969-3285 福島県耶麻郡猪苗代町翁沢長浜８７０"
+  },
+  {
+    "row_num": 202,
+    "name": "第9金龍(ハアー・ゲ)",
+    "landmark": "毘沙門沼(裏磐梯の湖沼の一つ)",
+    "lat_original": 37.6522203,
+    "lng_original": 140.0878089,
+    "reverse_address": "日本、〒966-0501 福島県耶麻郡北塩原村檜原剣ケ峯１０９３"
+  },
+  {
+    "row_num": 203,
+    "name": "第6青麟(ババ・ニエヒーオ)",
+    "landmark": "入道崎の突端の岩場",
+    "lat_original": 40.0058216,
+    "lng_original": 139.7012077,
+    "reverse_address": "日本、〒010-0675 秋田県男鹿市北浦入道崎昆布浦２"
+  },
+  {
+    "row_num": 204,
+    "name": "第1白鳳(チヘニアオス)",
+    "landmark": "尾瀬ヶ原下田代の竜宮湧水場(只見川源流点)",
+    "lat_original": 36.4895279,
+    "lng_original": 138.3996064,
+    "reverse_address": "F9QX+RR 日本、群馬県嬬恋村"
+  },
+  {
+    "row_num": 205,
+    "name": "第1金麟(ネギオズキイ)",
+    "landmark": "草津白根山(2150m)の鏡池",
+    "lat_original": 36.62,
+    "lng_original": 138.535,
+    "reverse_address": "日本、〒377-1711 群馬県吾妻郡草津町草津 JGGP+87"
+  },
+  {
+    "row_num": 206,
+    "name": "第3銀麟(クウレグアギ)",
+    "landmark": "妙義山(1103m)相馬岳山頂",
+    "lat_original": 36.2986013,
+    "lng_original": 138.7488767,
+    "reverse_address": "日本、〒379-0209 群馬県富岡市妙義町諸戸３７９ 0209"
+  },
+  {
+    "row_num": 207,
+    "name": "第7白武(ブオオガグイ)",
+    "landmark": "榛名湖の南岸から200m先の湖底",
+    "lat_original": 36.4763945,
+    "lng_original": 138.8674138,
+    "reverse_address": "FVG8+HX 日本、群馬県高崎市"
+  },
+  {
+    "row_num": 208,
+    "name": "第9群青麟(ケイゴエオル)",
+    "landmark": "武尊山(2158m)の山頂",
+    "lat_original": 36.8053471,
+    "lng_original": 139.132674,
+    "reverse_address": "日本、〒378-0102 群馬県利根郡川場村川場湯原武尊自然休養林"
+  },
+  {
+    "row_num": 209,
+    "name": "第9黄武(レオガイービ)",
+    "landmark": "吾妻渓谷の白絹の滝付近(若葉台)",
+    "lat_original": 36.5623182,
+    "lng_original": 138.7212628,
+    "reverse_address": "日本、〒377-0814 群馬県吾妻郡東吾妻町松谷８７３"
+  },
+  {
+    "row_num": 210,
+    "name": "第4白龍(セヌソサルン)",
+    "landmark": "(奥久慈)男体山の山頂岩峰(654m)",
+    "lat_original": 36.724091,
+    "lng_original": 140.4195693,
+    "reverse_address": "PCF9+JR 日本、茨城県常陸太田市"
+  },
+  {
+    "row_num": 211,
+    "name": "第7黄龍(フカエエール)",
+    "landmark": "竜神峡の亀ヶ淵の滝壺",
+    "lat_original": 36.6940891,
+    "lng_original": 140.4489603,
+    "reverse_address": "MCVX+JH 日本、茨城県常陸太田市"
+  },
+  {
+    "row_num": 212,
+    "name": "第2青武(ヌネイカル)",
+    "landmark": "野母岬の突端岩場(日本国の最西南端)",
+    "lat_original": 32.580646,
+    "lng_original": 129.747222,
+    "reverse_address": "日本、〒851-0505 長崎県長崎市野母町３３６１"
+  },
+  {
+    "row_num": 213,
+    "name": "第3橙麟(レーゲイオナ)",
+    "landmark": "雲仙普賢岳(1483m)",
+    "lat_original": 32.7804514,
+    "lng_original": 130.2672342,
+    "reverse_address": "日本、〒859-1317 長崎県雲仙市国見町土黒庚 普賢岳（ふげんだけ）生物群集保護林"
+  },
+  {
+    "row_num": 214,
+    "name": "第4金麟(ナゲ・リーリ)",
+    "landmark": "壱岐島から西方に150kmの海底鍾乳洞(深度600m)",
+    "lat_original": 33.77,
+    "lng_original": 128.09,
+    "reverse_address": "8Q5CQ39R+X2"
+  },
+  {
+    "row_num": 215,
+    "name": "第4金龍(グエニオン)",
+    "landmark": "対馬北西部の海岸線から北西に40km沖合の海底岩峰",
+    "lat_original": 34.91,
+    "lng_original": 128.94,
+    "reverse_address": "WW5Q+XX 大韓民国 プサン広域市"
+  },
+  {
+    "row_num": 216,
+    "name": "第1白銀麟(ワウルサンカ)",
+    "landmark": "八ヶ岳(赤岳: 2899m)の山頂(石碑周辺)",
+    "lat_original": 35.970833,
+    "lng_original": 138.37,
+    "reverse_address": "X9CC+82 日本、長野県富士見町"
+  },
+  {
+    "row_num": 217,
+    "name": "第1白麟(ゾコケウエオ)",
+    "landmark": "大正池(梓川の源流点)",
+    "lat_original": 36.228983,
+    "lng_original": 137.618765,
+    "reverse_address": "日本、〒390-1516 長野県松本市安曇大正池"
+  },
+  {
+    "row_num": 218,
+    "name": "第1緑鳳(ユエハエギン)",
+    "landmark": "松原湖沼群の中の猪名(いな)湖",
+    "lat_original": 35.8274657,
+    "lng_original": 137.9540692,
+    "reverse_address": "日本、〒396-0013 長野県伊那市下新田３０５０"
+  },
+  {
+    "row_num": 219,
+    "name": "第2橙龍(ネーレヒエル)",
+    "landmark": "南アルプスの塩見岳(3047m)",
+    "lat_original": 35.5738331,
+    "lng_original": 138.1831969,
+    "reverse_address": "H5FM+G7 日本、長野県伊那市"
+  },
+  {
+    "row_num": 220,
+    "name": "第3白麟(ウマバワウル)",
+    "landmark": "乗鞍岳山頂(3025m)",
+    "lat_original": 36.7834863,
+    "lng_original": 137.8040938,
+    "reverse_address": "QRM3+9J 日本、長野県小谷村"
+  },
+  {
+    "row_num": 221,
+    "name": "第3金鳳(ヘーオギオ)",
+    "landmark": "志賀高原焼額山(2009m)山頂の稚児池",
+    "lat_original": 36.7621607,
+    "lng_original": 138.5100071,
+    "reverse_address": "日本、〒381-0405 長野県下高井郡山ノ内町夜間瀬 QG66+V2"
+  },
+  {
+    "row_num": 222,
+    "name": "第5群青武(ハイルルニイ)",
+    "landmark": "飯綱山(1917m)の山頂",
+    "lat_original": 36.7393153,
+    "lng_original": 138.1331632,
+    "reverse_address": "P4QM+P7 日本、長野県長野市"
+  },
+  {
+    "row_num": 223,
+    "name": "第6金麟(リエルゲゲゾ)",
+    "landmark": "奥志賀高原大滝(おおぜん: 35m)の滝壺",
+    "lat_original": 36.7659475,
+    "lng_original": 138.514592,
+    "reverse_address": "日本、〒381-0405 長野県下高井郡山ノ内町平穏 夜間瀬大沢12377−17"
+  },
+  {
+    "row_num": 224,
+    "name": "第7白龍(ユボキ・エネ)",
+    "landmark": "霧ヶ峰八島ヶ原(ハットオガハラ)湿原",
+    "lat_original": 36.1189434,
+    "lng_original": 138.16735,
+    "reverse_address": "日本、〒393-0000 長野県諏訪郡下諏訪町 八島湿原１０６１８"
+  },
+  {
+    "row_num": 225,
+    "name": "第8群青武( ヘーガヌルエ)",
+    "landmark": "諏訪大社(諏訪湖龍神の宿場)",
+    "lat_original": 35.9982782,
+    "lng_original": 138.1191482,
+    "reverse_address": "日本、〒392-0015 長野県諏訪市中洲宮山１"
+  },
+  {
+    "row_num": 226,
+    "name": "第8群青龍(フイイハエイ)",
+    "landmark": "古谷渓谷の乙女の滝の滝壺",
+    "lat_original": 36.0361051,
+    "lng_original": 138.2708675,
+    "reverse_address": "日本、〒391-0301 長野県茅野市北山蓼科５５２２−４６５"
+  },
+  {
+    "row_num": 227,
+    "name": "第9緑龍(ヘオキバ)",
+    "landmark": "野尻湖の南湖畔",
+    "lat_original": 36.8231179,
+    "lng_original": 138.2228409,
+    "reverse_address": "R6FF+64 日本、長野県信濃町"
+  },
+  {
+    "row_num": 228,
+    "name": "第9銀麟(ゲイケネール)",
+    "landmark": "槍ヶ岳(3180m)山頂",
+    "lat_original": 36.3420332,
+    "lng_original": 137.6476213,
+    "reverse_address": "8JRX+R2 日本、長野県大町市"
+  },
+  {
+    "row_num": 229,
+    "name": "第1緑麟(リーヌプオン)",
+    "landmark": "十二湖の中の青池(マリンブルー)",
+    "lat_original": 40.5636816,
+    "lng_original": 139.9796982,
+    "reverse_address": "HX7H+FV 日本、青森県深浦町"
+  },
+  {
+    "row_num": 230,
+    "name": "第2群青龍(ハイコカエゲ)",
+    "landmark": "中山半島の錦ヶ浦から200m沖合の湖底",
+    "lat_original": 40.4420853,
+    "lng_original": 140.8790973,
+    "reverse_address": "CVRH+RJ 日本、青森県十和田市"
+  },
+  {
+    "row_num": 231,
+    "name": "第3青武(ツイキケオリ)",
+    "landmark": "小泊岬(権現岬)の突端の岩場",
+    "lat_original": 41.1243277,
+    "lng_original": 140.2479192,
+    "reverse_address": "46FX+P5 日本、青森県中泊町"
+  },
+  {
+    "row_num": 232,
+    "name": "第5白銀武(ビメルニズワ)",
+    "landmark": "尻屋埼(灯台)海岸突端部",
+    "lat_original": 41.3960569,
+    "lng_original": 141.4417712,
+    "reverse_address": "9CWR+CP 日本、青森県東通村"
+  },
+  {
+    "row_num": 233,
+    "name": "第5銀鳳(ケウレコーケ)",
+    "landmark": "龍飛崎の先端岩石",
+    "lat_original": 41.2596923,
+    "lng_original": 140.3423438,
+    "reverse_address": "日本、〒030-1711 青森県東津軽郡外ヶ浜町三厩龍浜５４−２５"
+  },
+  {
+    "row_num": 234,
+    "name": "第8橙鳳(ネクルエール)",
+    "landmark": "白神岳(1235m)",
+    "lat_original": 40.5036398,
+    "lng_original": 140.0187685,
+    "reverse_address": "日本、〒038-2207 青森県西津軽郡深浦町黒崎 G239+JP"
+  },
+  {
+    "row_num": 235,
+    "name": "第2群青鳳(ナイクアキエ)",
+    "landmark": "白倉(しらくら)峡(エメラルド・グリーンの滝壺)",
+    "lat_original": 34.9122585,
+    "lng_original": 139.1221374,
+    "reverse_address": "日本、〒413-0231 静岡県伊東市富戸１１０９−２７"
+  },
+  {
+    "row_num": 236,
+    "name": "第3群青武(ヘルオルエナ)",
+    "landmark": "影ヶ島渓谷の屏風岩",
+    "lat_original": 35.1963083,
+    "lng_original": 138.8989589,
+    "reverse_address": "日本、〒410-1116 静岡県裾野市千福３７７−８７"
+  },
+  {
+    "row_num": 237,
+    "name": "第4白銀武(ビアケ・リブ)",
+    "landmark": "石廊崎の突端部",
+    "lat_original": 34.6153388,
+    "lng_original": 138.8422555,
+    "reverse_address": "日本、〒415-0156 静岡県賀茂郡南伊豆町石廊崎１６３−３"
+  },
+  {
+    "row_num": 238,
+    "name": "第7白銀龍(クエギヤオル)",
+    "landmark": "初景滝(七滝)の滝壺",
+    "lat_original": 34.7980677,
+    "lng_original": 138.9323623,
+    "reverse_address": "日本、〒413-0501 静岡県賀茂郡河津町梨本１１１２−７"
+  },
+  {
+    "row_num": 239,
+    "name": "第7金龍(ヌキグ・ガゴ)",
+    "landmark": "南アルプス聖岳(3013m)の山頂:【ヤエゲリア龍神】",
+    "lat_original": 34.9808771,
+    "lng_original": 138.3859254,
+    "reverse_address": "日本、〒420-0856 静岡県静岡市葵区駿府町２−２"
+  },
+  {
+    "row_num": 240,
+    "name": "第8黄鳳(テイグリーヌ)",
+    "landmark": "白糸の滝の滝壺",
+    "lat_original": 35.3129046,
+    "lng_original": 138.5874375,
+    "reverse_address": "日本、〒418-0103 静岡県富士宮市上井出２７３−１"
+  },
+  {
+    "row_num": 241,
+    "name": "第9緑麟(リエエオオン)",
+    "landmark": "接岨湖(せっそこ)の峡谷口",
+    "lat_original": 35.164345,
+    "lng_original": 138.1677065,
+    "reverse_address": "日本、〒428-0402 静岡県榛原郡川根本町犬間５４０"
+  },
+  {
+    "row_num": 242,
+    "name": "第3金麟(ケイキブルオ)",
+    "landmark": "小豆島の寒霞(かんか)渓谷の錦屏風",
+    "lat_original": 34.5106287,
+    "lng_original": 134.296065,
+    "reverse_address": "日本、〒761-4433 香川県小豆郡小豆島町神懸通 G76W+7C"
+  },
+  {
+    "row_num": 243,
+    "name": "第3青鳳(ユルヒアヌフ)",
+    "landmark": "竹居岬の突端の岩場(四国最北端)",
+    "lat_original": 34.3979985,
+    "lng_original": 134.1415573,
+    "reverse_address": "日本、〒761-0130 香川県高松市庵治町笹尾５３２９−２"
+  },
+  {
+    "row_num": 244,
+    "name": "第9白龍(コムニレギ・ピネ)",
+    "landmark": "五色台の法印池",
+    "lat_original": 34.3561673,
+    "lng_original": 133.9311793,
+    "reverse_address": "9W4J+FF 日本、香川県坂出市"
+  },
+  {
+    "row_num": 245,
+    "name": "第1白龍(ヘランターニ)",
+    "landmark": "四万十川源流点の鍾乳洞",
+    "lat_original": 33.4407575,
+    "lng_original": 133.0687738,
+    "reverse_address": "C3R9+8G 日本、高知県津野町"
+  },
+  {
+    "row_num": 246,
+    "name": "第3緑龍(ホケイチ)",
+    "landmark": "にこ淵の滝壺(仁淀ブルーの一つ)",
+    "lat_original": 33.7050909,
+    "lng_original": 133.3411744,
+    "reverse_address": "日本、〒781-2511 高知県吾川郡いの町清水上分２９７６−１１"
+  },
+  {
+    "row_num": 247,
+    "name": "第3群青麟(フエアイ)",
+    "landmark": "中津渓谷の石柱(エメラルド滝壺)",
+    "lat_original": 33.5609852,
+    "lng_original": 133.1296943,
+    "reverse_address": "日本、〒781-1742 高知県吾川郡仁淀川町竹屋敷中津渓谷"
+  },
+  {
+    "row_num": 248,
+    "name": "第4緑鳳(ヨオオリエル)",
+    "landmark": "大樽の滝(落差34m)の滝壺",
+    "lat_original": 33.5175116,
+    "lng_original": 133.2439522,
+    "reverse_address": "G69V+2H 日本、高知県越知町"
+  },
+  {
+    "row_num": 249,
+    "name": "第6青龍(ヒアキヨ)",
+    "landmark": "室戸岬の突端の岩場",
+    "lat_original": 33.2776617,
+    "lng_original": 134.1672804,
+    "reverse_address": "75H8+3W 日本、高知県室戸市"
+  },
+  {
+    "row_num": 250,
+    "name": "第6黄武(ロエレアイ)",
+    "landmark": "白猪谷(しらいだに)渓谷の滝の上流部",
+    "lat_original": 33.7746112,
+    "lng_original": 133.2049468,
+    "reverse_address": "Q6F3+RX 日本、高知県いの町"
+  },
+  {
+    "row_num": 251,
+    "name": "第9緑武(クイギケール)",
+    "landmark": "三嶺(みうね)山(1894m)山頂の池",
+    "lat_original": 33.5296836,
+    "lng_original": 133.591924,
+    "reverse_address": "日本、〒781-0111 高知県高知市池２０１５"
+  },
+  {
+    "row_num": 252,
+    "name": "第9金武(ユエオブルン)",
+    "landmark": "古満目岬の突端海岸部(道無し)",
+    "lat_original": 32.7872078,
+    "lng_original": 132.6843878,
+    "reverse_address": "QMPM+VQ 日本、高知県大月町"
+  },
+  {
+    "row_num": 253,
+    "name": "第5群青麟(エイエア)",
+    "landmark": "道後山(1269m)の山頂沼",
+    "lat_original": 35.0696264,
+    "lng_original": 133.2328851,
+    "reverse_address": "369M+V5 日本、鳥取県日南町"
+  },
+  {
+    "row_num": 254,
+    "name": "第7白銀武(ヘオケ・ヘウ)",
+    "landmark": "大山(1729m)第2峰の弥山(1709m)山頂",
+    "lat_original": 35.3709889,
+    "lng_original": 133.5399803,
+    "reverse_address": "9GCQ+9X 日本、鳥取県大山町"
+  },
+  {
+    "row_num": 255,
+    "name": "第1白銀武(バカギナグキ)",
+    "landmark": "白谷雲水峡(渓谷中央部付近)",
+    "lat_original": 30.386422,
+    "lng_original": 130.5735462,
+    "reverse_address": "9HPF+HC 日本、鹿児島県屋久島町"
+  },
+  {
+    "row_num": 256,
+    "name": "第2青麟(クエール)",
+    "landmark": "雀島の西側の島(西海岸の岩場)",
+    "lat_original": 31.1715596,
+    "lng_original": 129.418043,
+    "reverse_address": "8Q3F5CC9+J6"
+  },
+  {
+    "row_num": 257,
+    "name": "第3白銀麟(リオルイオゲ)",
+    "landmark": "種子島の島間川の渓谷(中之上地域)",
+    "lat_original": 30.4232976,
+    "lng_original": 130.9031301,
+    "reverse_address": "日本、〒891-3701 鹿児島県熊毛郡南種子町中之上１７６４−３"
+  },
+  {
+    "row_num": 258,
+    "name": "第5紫武(ビエグルクオ)",
+    "landmark": "鹿児島神宮の川(竜宮の亀石の近く)",
+    "lat_original": 31.5968539,
+    "lng_original": 130.5571392,
+    "reverse_address": "日本、〒892-0816 鹿児島県鹿児島市山下町１１−１"
+  },
+  {
+    "row_num": 259,
+    "name": "第6銀武(ゲグキナオブ)",
+    "landmark": "奄美大島アランガチの滝",
+    "lat_original": 28.270538,
+    "lng_original": 129.3234953,
+    "reverse_address": "日本、〒894-3301 鹿児島県大島郡宇検村湯湾１８３５"
+  },
+  {
+    "row_num": 260,
+    "name": "第7緑鳳(ヨエルオオン)",
+    "landmark": "藺牟田(いむた)池",
+    "lat_original": 31.8186703,
+    "lng_original": 130.4821815,
+    "reverse_address": "日本、〒895-1502 鹿児島県薩摩川内市祁答院町藺牟田１８０５−５"
+  },
+  {
+    "row_num": 261,
+    "name": "第8橙龍(ヌキヒレ)",
+    "landmark": "黒味岳(1831m)",
+    "lat_original": 30.3171989,
+    "lng_original": 130.5091489,
+    "reverse_address": "8G85+VM 日本、鹿児島県屋久島町"
+  },
+  {
+    "row_num": 262,
+    "name": "第8群青麟(ガエ・ビエゴ)",
+    "landmark": "佐多岬の先端岩場",
+    "lat_original": 30.995221,
+    "lng_original": 130.662827,
+    "reverse_address": "XMW7+34 日本、鹿児島県南大隅町"
+  }
+]
