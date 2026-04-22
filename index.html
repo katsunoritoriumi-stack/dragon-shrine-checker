@@ -39,7 +39,26 @@
     }
     #result-count { font-size: 0.8rem; color: #8888bb; }
 
-    #map { flex: 1; }
+    .ctrl-btn {
+      padding: 5px 12px; border-radius: 20px; border: 1px solid #3a2a6a;
+      background: #1a1230; color: #c8a8ff; font-size: 0.8rem;
+      cursor: pointer; white-space: nowrap; transition: background 0.2s;
+    }
+    .ctrl-btn:hover { background: #2a1a50; }
+    .ctrl-btn.active { background: #7a2200; border-color: #ff6633; color: #ffcc99; }
+    .ctrl-btn.save { background: #1a3a1a; border-color: #33aa33; color: #99ffaa; }
+    .ctrl-btn.save:hover { background: #2a5a2a; }
+
+    #map { flex: 1; position: relative; }
+
+    #edit-banner {
+      display: none;
+      position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+      z-index: 1000; background: rgba(180,50,0,0.9); border: 1px solid #ff6633;
+      border-radius: 8px; padding: 6px 16px; font-size: 0.85rem; color: #ffcc99;
+      pointer-events: none;
+    }
+    #edit-banner.visible { display: block; }
 
     .leaflet-popup-content-wrapper {
       background: #1a1230; border: 1px solid #5533aa; border-radius: 10px; color: #e0e0ff;
@@ -50,9 +69,8 @@
     .popup-pref { display: inline-block; background: #3a1a6e; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; color: #bb99ff; margin-bottom: 6px; }
     .popup-address { font-size: 0.8rem; color: #aaaacc; margin-bottom: 4px; }
     .popup-landmark { font-size: 0.8rem; color: #ccccee; }
+    .popup-coords { font-size: 0.75rem; color: #888899; margin-top: 4px; font-family: monospace; }
     .popup-btns { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
-    .popup-maps { display: inline-block; padding: 4px 12px; background: #4285f4; color: white; border-radius: 12px; font-size: 0.75rem; text-decoration: none; }
-    .popup-maps:hover { background: #5a95ff; }
     .popup-page { display: inline-block; padding: 4px 12px; background: #5533aa; color: white; border-radius: 12px; font-size: 0.75rem; text-decoration: none; }
     .popup-page:hover { background: #7755cc; }
 
@@ -65,6 +83,7 @@
     .legend-item { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
     .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.3); }
 
+    .leaflet-marker-draggable { cursor: move !important; }
   </style>
 </head>
 <body>
@@ -76,8 +95,13 @@
     <input id="search" type="text" placeholder="🔍 龍神名・住所で検索…">
     <select id="pref-select"><option value="">全都道府県</option></select>
     <span id="result-count"></span>
+    <button class="ctrl-btn" id="edit-toggle">✏️ 編集モード</button>
+    <button class="ctrl-btn save" id="save-btn" style="display:none">💾 保存</button>
+    <button class="ctrl-btn" id="load-btn">📂 読み込む</button>
+    <input type="file" id="load-file" accept=".json" style="display:none">
   </div>
   <div id="map">
+    <div id="edit-banner">✏️ 編集モード中 — ピンをドラッグして位置を修正できます</div>
     <div id="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#F5F5F5;border-color:#BBBBBB"></div>白</div>
       <div class="legend-item"><div class="legend-dot" style="background:#BDD0E0;border-color:#8AAABB"></div>白銀</div>
@@ -95,8 +119,22 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="spots_data.js"></script>
+  <script src="spots_data.js"></script>
   <script>
+    // --- 起動時に localStorage から補正データを復元 ---
+    const corrections = {};
+    try {
+      const saved = localStorage.getItem('dragon-corrections');
+      if (saved) {
+        JSON.parse(saved).forEach(({name, lat, lng}) => {
+          corrections[name] = {lat, lng};
+          const spot = SPOTS.find(s => s.name === name);
+          if (spot) { spot.lat = lat; spot.lng = lng; }
+        });
+      }
+    } catch (e) {}
+
+    // --- 地図初期化 ---
     const map = L.map('map', { center: [37.0, 137.0], zoom: 5 });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors', maxZoom: 18
@@ -110,7 +148,7 @@
       });
     }
 
-    const cluster = L.layerGroup();
+    const layerGroup = L.layerGroup();
 
     // 都道府県リスト
     const prefs = [...new Set(SPOTS.map(s => s.prefecture))].sort();
@@ -122,30 +160,47 @@
     });
 
     let allMarkers = [];
+    let editMode = false;
 
-    function buildMarker(spot) {
-      const mapsUrl = `https://www.google.com/maps?q=${spot.lat},${spot.lng}&z=15`;
-      const popup = `
+    function makePopupContent(spot) {
+      return `
         <div class="popup-pref">${spot.prefecture}</div>
         <div class="popup-name">${spot.name}</div>
         <div class="popup-address">📍 ${spot.address}</div>
         ${spot.landmark ? `<div class="popup-landmark">🗺 ${spot.landmark}</div>` : ''}
+        <div class="popup-coords" id="coords-${spot.name.replace(/\W/g,'_')}">🌐 ${spot.lat.toFixed(6)}, ${spot.lng.toFixed(6)}</div>
         <div class="popup-btns">
           <a class="popup-page" href="${spot.pageUrl}" target="_blank">🐉 龍神ページを見る</a>
         </div>
       `;
+    }
+
+    function buildMarker(spot) {
       const icon = makeIcon(spot.fill, spot.border);
-      const m = L.marker([spot.lat, spot.lng], { icon }).bindPopup(popup, { maxWidth: 280 });
+      const m = L.marker([spot.lat, spot.lng], { icon, draggable: false })
+        .bindPopup(makePopupContent(spot), { maxWidth: 280 });
       m._spotData = spot;
+
+      m.on('dragend', function () {
+        const pos = this.getLatLng();
+        const s = this._spotData;
+        s.lat = pos.lat;
+        s.lng = pos.lng;
+        corrections[s.name] = {lat: pos.lat, lng: pos.lng};
+        // ポップアップの座標表示を更新
+        this.setPopupContent(makePopupContent(s));
+        updateSaveBtn();
+      });
+
       return m;
     }
 
     SPOTS.forEach(spot => {
       const m = buildMarker(spot);
       allMarkers.push(m);
-      cluster.addLayer(m);
+      layerGroup.addLayer(m);
     });
-    map.addLayer(cluster);
+    map.addLayer(layerGroup);
 
     document.getElementById('total-count').textContent = `全${SPOTS.length}件表示中`;
     document.getElementById('result-count').textContent = `${SPOTS.length}件`;
@@ -153,15 +208,15 @@
     function applyFilter() {
       const query = document.getElementById('search').value.trim().toLowerCase();
       const pref  = document.getElementById('pref-select').value;
-      cluster.clearLayers();
+      layerGroup.clearLayers();
       let count = 0;
       allMarkers.forEach(m => {
         const s = m._spotData;
         const matchPref = !pref || s.prefecture === pref;
         const matchQ = !query || s.name.toLowerCase().includes(query) ||
                        s.address.toLowerCase().includes(query) ||
-                       s.landmark.toLowerCase().includes(query);
-        if (matchPref && matchQ) { cluster.addLayer(m); count++; }
+                       (s.landmark && s.landmark.toLowerCase().includes(query));
+        if (matchPref && matchQ) { layerGroup.addLayer(m); count++; }
       });
       document.getElementById('result-count').textContent = `${count}件`;
       document.getElementById('total-count').textContent = `${count}件表示中`;
@@ -169,6 +224,76 @@
 
     document.getElementById('search').addEventListener('input', applyFilter);
     document.getElementById('pref-select').addEventListener('change', applyFilter);
+
+    // --- 編集モード ---
+    function updateSaveBtn() {
+      const n = Object.keys(corrections).length;
+      const btn = document.getElementById('save-btn');
+      btn.textContent = n > 0 ? `💾 保存 (${n}件)` : '💾 保存';
+    }
+
+    document.getElementById('edit-toggle').addEventListener('click', function () {
+      editMode = !editMode;
+      this.textContent = editMode ? '✏️ 編集モード ON' : '✏️ 編集モード';
+      this.classList.toggle('active', editMode);
+      document.getElementById('save-btn').style.display = editMode ? '' : 'none';
+      document.getElementById('edit-banner').classList.toggle('visible', editMode);
+      allMarkers.forEach(m => {
+        if (editMode) m.dragging.enable();
+        else m.dragging.disable();
+      });
+      if (editMode) updateSaveBtn();
+    });
+
+    // --- 保存: localStorage + JSON ダウンロード ---
+    document.getElementById('save-btn').addEventListener('click', function () {
+      const data = Object.entries(corrections).map(([name, {lat, lng}]) => ({name, lat, lng}));
+      try { localStorage.setItem('dragon-corrections', JSON.stringify(data)); } catch (e) {}
+      const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'corrections.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // --- 読み込み: JSON ファイルで既存マーカーを移動 ---
+    document.getElementById('load-btn').addEventListener('click', function () {
+      document.getElementById('load-file').click();
+    });
+
+    document.getElementById('load-file').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        try {
+          const data = JSON.parse(ev.target.result);
+          let applied = 0;
+          data.forEach(({name, lat, lng}) => {
+            corrections[name] = {lat, lng};
+            const m = allMarkers.find(m => m._spotData.name === name);
+            if (m) {
+              m.setLatLng([lat, lng]);
+              m._spotData.lat = lat;
+              m._spotData.lng = lng;
+              m.setPopupContent(makePopupContent(m._spotData));
+              applied++;
+            }
+          });
+          try { localStorage.setItem('dragon-corrections', JSON.stringify(
+            Object.entries(corrections).map(([name, {lat, lng}]) => ({name, lat, lng}))
+          )); } catch (e) {}
+          alert(`${applied}件の座標を読み込みました`);
+          updateSaveBtn();
+        } catch (err) {
+          alert('JSONファイルの読み込みに失敗しました');
+        }
+      };
+      reader.readAsText(file);
+      this.value = '';
+    });
   </script>
 </body>
 </html>
