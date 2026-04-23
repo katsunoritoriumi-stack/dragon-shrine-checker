@@ -266,12 +266,6 @@
       document.getElementById('result-count').textContent = `${count}件`;
       document.getElementById('total-count').textContent = `${count}件表示中`;
 
-      // 眷属検索で1件ヒットした場合は自動ズーム
-      if (kActive && matched.length === 1) {
-        const s = matched[0]._spotData;
-        map.setView([s.lat, s.lng], 13);
-        matched[0].openPopup();
-      }
     }
 
     document.getElementById('search').addEventListener('input', applyFilter);
