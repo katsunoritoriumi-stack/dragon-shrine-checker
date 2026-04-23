@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>龍神スポットマップ</title>
+  <title>全国龍管マップ</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,7 +32,7 @@
       color: #e0e0ff; font-size: 0.85rem; outline: none;
     }
     #search:focus { border-color: #8866cc; }
-    #pref-select {
+    #pref-select, #color-select {
       padding: 6px 10px; border-radius: 20px;
       border: 1px solid #3a2a6a; background: #1a1230;
       color: #e0e0ff; font-size: 0.85rem; outline: none; cursor: pointer;
@@ -88,12 +88,27 @@
 </head>
 <body>
   <header>
-    <h1>🐉 龍神スポットマップ</h1>
+    <h1>🐉 全国龍管マップ</h1>
     <span class="count" id="total-count"></span>
   </header>
   <div id="controls">
     <input id="search" type="text" placeholder="🔍 龍神名・住所で検索…">
     <select id="pref-select"><option value="">全都道府県</option></select>
+    <select id="color-select">
+      <option value="">全色表示</option>
+      <option value="白">白</option>
+      <option value="白銀">白銀</option>
+      <option value="銀">銀</option>
+      <option value="金">金</option>
+      <option value="紫">紫</option>
+      <option value="群青">群青</option>
+      <option value="青">青</option>
+      <option value="緑">緑</option>
+      <option value="黄">黄</option>
+      <option value="橙">橙</option>
+      <option value="赤">赤</option>
+      <option value="黒">黒</option>
+    </select>
     <span id="result-count"></span>
     <button class="ctrl-btn" id="edit-toggle">✏️ 編集モード</button>
     <button class="ctrl-btn save" id="save-btn" style="display:none">💾 保存</button>
@@ -208,15 +223,17 @@
     function applyFilter() {
       const query = document.getElementById('search').value.trim().toLowerCase();
       const pref  = document.getElementById('pref-select').value;
+      const color = document.getElementById('color-select').value;
       layerGroup.clearLayers();
       let count = 0;
       allMarkers.forEach(m => {
         const s = m._spotData;
-        const matchPref = !pref || s.prefecture === pref;
+        const matchPref  = !pref  || s.prefecture === pref;
+        const matchColor = !color || s.color === color;
         const matchQ = !query || s.name.toLowerCase().includes(query) ||
                        s.address.toLowerCase().includes(query) ||
                        (s.landmark && s.landmark.toLowerCase().includes(query));
-        if (matchPref && matchQ) { layerGroup.addLayer(m); count++; }
+        if (matchPref && matchColor && matchQ) { layerGroup.addLayer(m); count++; }
       });
       document.getElementById('result-count').textContent = `${count}件`;
       document.getElementById('total-count').textContent = `${count}件表示中`;
@@ -224,6 +241,7 @@
 
     document.getElementById('search').addEventListener('input', applyFilter);
     document.getElementById('pref-select').addEventListener('change', applyFilter);
+    document.getElementById('color-select').addEventListener('change', applyFilter);
 
     // --- 編集モード ---
     function updateSaveBtn() {
