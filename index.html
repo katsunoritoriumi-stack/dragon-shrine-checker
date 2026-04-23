@@ -39,92 +39,26 @@
     }
     #result-count { font-size: 0.8rem; color: #8888bb; }
 
-    /* 眷属検索パネル */
     #kenzoku-bar {
       background: #0b0f1c;
       border-bottom: 1px solid #1a1a3a;
-      flex-shrink: 0;
-    }
-    #kenzoku-header {
       padding: 6px 12px;
-      display: flex; align-items: center; gap: 8px; cursor: pointer;
-      user-select: none;
+      display: flex; gap: 8px; align-items: center; flex-wrap: wrap; flex-shrink: 0;
     }
-    #kenzoku-header .k-title { font-size: 0.82rem; color: #aa88ff; font-weight: bold; }
-    #k-toggle-arrow {
-      font-size: 0.65rem; color: #7766aa;
-      margin-right: auto; transition: transform 0.2s;
-    }
-    #k-toggle-arrow.open { transform: rotate(180deg); }
-    #k-reset-btn {
-      padding: 3px 10px; border-radius: 10px;
-      border: 1px solid #5533aa; background: transparent;
-      color: #aa88ff; font-size: 0.72rem; cursor: pointer;
-    }
-    #k-reset-btn:hover { background: #2a1a4e; }
-
-    #kenzoku-body { padding: 4px 12px 10px; display: none; }
-    #kenzoku-body.open { display: block; }
-
-    .k-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 7px; flex-wrap: wrap; }
-    .k-row-label { font-size: 0.72rem; color: #8877aa; white-space: nowrap; min-width: 44px; padding-top: 4px; }
-    .k-btn-group { display: flex; flex-wrap: wrap; gap: 4px; }
-
-    .k-btn {
-      padding: 3px 10px; border-radius: 12px;
+    #kenzoku-bar .k-label { font-size: 0.8rem; color: #aa88ff; white-space: nowrap; }
+    #k-num, #k-color, #k-type {
+      padding: 6px 10px; border-radius: 20px;
       border: 1px solid #3a2a6a; background: #1a1230;
-      color: #c8b8ff; font-size: 0.8rem; cursor: pointer;
-      transition: all 0.15s; white-space: nowrap;
+      color: #e0e0ff; font-size: 0.85rem; outline: none; cursor: pointer;
     }
-    .k-btn:hover:not(.k-disabled) { border-color: #7755cc; background: #2a1a4e; }
-    .k-btn.k-selected { border-color: #9966ff; background: #3a1a6e; color: #fff; box-shadow: 0 0 6px #9966ff88; }
-    .k-btn.k-disabled { opacity: 0.28; cursor: default; }
-    .k-color-btn { display: flex; align-items: center; gap: 4px; }
-    .k-color-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.25); }
+    #k-reset {
+      padding: 5px 12px; border-radius: 20px;
+      border: 1px solid #5533aa; background: transparent;
+      color: #aa88ff; font-size: 0.85rem; cursor: pointer;
+    }
+    #k-reset:hover { background: #2a1a4e; }
 
-    #kenzoku-hint { font-size: 0.72rem; color: #665588; margin-top: 2px; }
-
-    /* メインエリア */
-    #main-area { flex: 1; display: flex; overflow: hidden; }
     #map { flex: 1; position: relative; }
-
-    #kenzoku-results {
-      width: 300px; min-width: 260px;
-      background: #0d1020;
-      border-left: 1px solid #2a1a4e;
-      display: flex; flex-direction: column;
-      overflow: hidden;
-    }
-    #kr-header {
-      padding: 8px 12px;
-      background: #0d1b2a;
-      border-bottom: 1px solid #2a1a4e;
-      font-size: 0.82rem; color: #aa88ff; font-weight: bold;
-      flex-shrink: 0;
-    }
-    #kr-list {
-      overflow-y: auto; flex: 1; padding: 8px;
-      display: flex; flex-direction: column; gap: 6px;
-    }
-
-    .result-card {
-      background: #1a1230; border: 1px solid #3a2a6a;
-      border-radius: 8px; padding: 8px 10px; cursor: pointer;
-      transition: border-color 0.15s;
-    }
-    .result-card:hover { border-color: #7755cc; }
-    .rc-name { font-size: 0.86rem; font-weight: bold; color: #c8a8ff; margin-bottom: 4px; }
-    .rc-pref { display: inline-block; background: #3a1a6e; padding: 1px 7px; border-radius: 8px; font-size: 0.7rem; color: #bb99ff; margin-bottom: 4px; }
-    .rc-address { font-size: 0.74rem; color: #aaaacc; margin-bottom: 2px; }
-    .rc-landmark { font-size: 0.72rem; color: #ccccee; margin-bottom: 2px; }
-    .rc-coords { font-size: 0.67rem; color: #888899; font-family: monospace; margin-bottom: 5px; }
-    .rc-link { display: inline-block; padding: 3px 10px; background: #5533aa; color: white; border-radius: 10px; font-size: 0.7rem; text-decoration: none; }
-    .rc-link:hover { background: #7755cc; }
-
-    @media (max-width: 680px) {
-      #main-area { flex-direction: column; }
-      #kenzoku-results { width: 100%; min-width: 0; border-left: none; border-top: 1px solid #2a1a4e; height: 220px; }
-    }
 
     .leaflet-popup-content-wrapper {
       background: #1a1230; border: 1px solid #5533aa; border-radius: 10px; color: #e0e0ff;
@@ -178,68 +112,49 @@
   </div>
 
   <div id="kenzoku-bar">
-    <div id="kenzoku-header">
-      <span class="k-title">🔱 眷属検索</span>
-      <span id="k-toggle-arrow" class="open">▲</span>
-      <button id="k-reset-btn">クリア</button>
-    </div>
-    <div id="kenzoku-body" class="open">
-      <div class="k-row">
-        <span class="k-row-label">① 数字</span>
-        <div class="k-btn-group" id="k-num-group"></div>
-      </div>
-      <div class="k-row">
-        <span class="k-row-label">② 色</span>
-        <div class="k-btn-group" id="k-color-group"></div>
-      </div>
-      <div class="k-row">
-        <span class="k-row-label">③ 眷属</span>
-        <div class="k-btn-group" id="k-type-group"></div>
-      </div>
-      <div id="kenzoku-hint"></div>
-    </div>
+    <span class="k-label">⚡ 眷属検索：</span>
+    <select id="k-num">
+      <option value="">数字</option>
+      <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+      <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+      <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+    </select>
+    <select id="k-color">
+      <option value="">色</option>
+    </select>
+    <select id="k-type">
+      <option value="">眷属</option>
+      <option value="龍">龍（竜）</option>
+      <option value="麟">麟（麒麟）</option>
+      <option value="鳳">鳳（鳳凰）</option>
+      <option value="武">武（玄武）</option>
+    </select>
+    <button id="k-reset">クリア</button>
   </div>
 
-  <div id="main-area">
-    <div id="map">
-      <div id="legend">
-        <div class="legend-item"><div class="legend-dot" style="background:#F5F5F5;border-color:#BBBBBB"></div>白</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#BDD0E0;border-color:#8AAABB"></div>白銀</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#9E9E9E;border-color:#616161"></div>銀</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#FFD700;border-color:#B8860B"></div>金</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#AB47BC;border-color:#6A1B9A"></div>紫</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#1565C0;border-color:#0D3C77"></div>群青</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#29B6F6;border-color:#0277BD"></div>青</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#66BB6A;border-color:#2E7D32"></div>緑</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#FFEE58;border-color:#F9A825"></div>黄</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#FFA726;border-color:#E65100"></div>橙</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#EF5350;border-color:#B71C1C"></div>赤</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#424242;border-color:#212121"></div>黒</div>
-      </div>
-    </div>
-    <div id="kenzoku-results" style="display:none">
-      <div id="kr-header"></div>
-      <div id="kr-list"></div>
+  <div id="map">
+    <div id="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#F5F5F5;border-color:#BBBBBB"></div>白</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#BDD0E0;border-color:#8AAABB"></div>白銀</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#9E9E9E;border-color:#616161"></div>銀</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FFD700;border-color:#B8860B"></div>金</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#AB47BC;border-color:#6A1B9A"></div>紫</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1565C0;border-color:#0D3C77"></div>群青</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#29B6F6;border-color:#0277BD"></div>青</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#66BB6A;border-color:#2E7D32"></div>緑</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FFEE58;border-color:#F9A825"></div>黄</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FFA726;border-color:#E65100"></div>橙</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#EF5350;border-color:#B71C1C"></div>赤</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#424242;border-color:#212121"></div>黒</div>
     </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="spots_data.js"></script>
   <script>
-    // スポット名解析：色の優先順位は長い文字列（白銀・群青）を先にマッチさせる
+    // スポット名解析：白銀・群青を白・青より先にマッチさせる順序
     const NAME_RE = /^第(\d+)(白銀|群青|白|銀|金|紫|青|緑|黄|橙|赤|黒)(龍|麟|鳳|武)/;
-
-    // 表示順（仕様通り固定）
     const COLOR_DISPLAY = ['白','白銀','銀','金','紫','群青','青','緑','黄','橙','赤','黒'];
-    const COLOR_CSS = {
-      '白':'#F5F5F5','白銀':'#BDD0E0','銀':'#9E9E9E','金':'#FFD700',
-      '紫':'#AB47BC','群青':'#1565C0','青':'#29B6F6','緑':'#66BB6A',
-      '黄':'#FFEE58','橙':'#FFA726','赤':'#EF5350','黒':'#424242'
-    };
-    const TYPES = [
-      {val:'龍', label:'龍（竜）'}, {val:'麟', label:'麟（麒麟）'},
-      {val:'鳳', label:'鳳（鳳凰）'}, {val:'武', label:'武（玄武）'}
-    ];
 
     function parseSpotName(name) {
       const m = name.match(NAME_RE);
@@ -271,77 +186,15 @@
       prefSel.appendChild(opt);
     });
 
-    // データに実際に存在する色セット（正規表現解析で抽出）
+    // 色ドロップダウン：固定順でデータに存在する色のみ追加
     const usedColorSet = new Set();
     SPOTS.forEach(s => { const p = parseSpotName(s.name); if (p) usedColorSet.add(p.color); });
-
-    // 眷属検索の選択状態
-    let kNum = '', kColor = '', kType = '';
-
-    // 数字ボタン生成
-    const numGroup = document.getElementById('k-num-group');
-    for (let i = 1; i <= 9; i++) {
-      const btn = document.createElement('button');
-      btn.className = 'k-btn';
-      btn.textContent = String(i);
-      btn.dataset.val = String(i);
-      btn.addEventListener('click', () => {
-        kNum = kNum === btn.dataset.val ? '' : btn.dataset.val;
-        applyFilter();
-      });
-      numGroup.appendChild(btn);
-    }
-
-    // 色ボタン生成（固定順・未使用色はグレーアウト）
-    const colorGroup = document.getElementById('k-color-group');
+    const kColorSel = document.getElementById('k-color');
     COLOR_DISPLAY.forEach(c => {
-      const btn = document.createElement('button');
-      btn.className = 'k-btn k-color-btn';
-      btn.dataset.val = c;
-      const dot = document.createElement('span');
-      dot.className = 'k-color-dot';
-      dot.style.background = COLOR_CSS[c];
-      btn.appendChild(dot);
-      btn.appendChild(document.createTextNode(c));
-      if (usedColorSet.has(c)) {
-        btn.addEventListener('click', () => {
-          kColor = kColor === c ? '' : c;
-          applyFilter();
-        });
-      } else {
-        btn.classList.add('k-disabled');
-      }
-      colorGroup.appendChild(btn);
-    });
-
-    // 眷属ボタン生成
-    const typeGroup = document.getElementById('k-type-group');
-    TYPES.forEach(t => {
-      const btn = document.createElement('button');
-      btn.className = 'k-btn';
-      btn.textContent = t.label;
-      btn.dataset.val = t.val;
-      btn.addEventListener('click', () => {
-        kType = kType === t.val ? '' : t.val;
-        applyFilter();
-      });
-      typeGroup.appendChild(btn);
-    });
-
-    // パネル開閉トグル
-    const kenzokuBody = document.getElementById('kenzoku-body');
-    const kToggleArrow = document.getElementById('k-toggle-arrow');
-    document.getElementById('kenzoku-header').addEventListener('click', e => {
-      if (e.target.id === 'k-reset-btn') return;
-      kenzokuBody.classList.toggle('open');
-      kToggleArrow.classList.toggle('open');
-      setTimeout(() => map.invalidateSize(), 200);
-    });
-
-    // クリアボタン
-    document.getElementById('k-reset-btn').addEventListener('click', () => {
-      kNum = ''; kColor = ''; kType = '';
-      applyFilter();
+      if (!usedColorSet.has(c)) return;
+      const opt = document.createElement('option');
+      opt.value = c; opt.textContent = c;
+      kColorSel.appendChild(opt);
     });
 
     let allMarkers = [];
@@ -378,25 +231,17 @@
     document.getElementById('result-count').textContent = `${SPOTS.length}件`;
 
     function applyFilter() {
-      const query = document.getElementById('search').value.trim().toLowerCase();
-      const pref  = document.getElementById('pref-select').value;
-      const color = document.getElementById('color-select').value;
+      const query  = document.getElementById('search').value.trim().toLowerCase();
+      const pref   = document.getElementById('pref-select').value;
+      const color  = document.getElementById('color-select').value;
+      const kNum   = document.getElementById('k-num').value;
+      const kColor = document.getElementById('k-color').value;
+      const kType  = document.getElementById('k-type').value;
       const kActive = !!(kNum && kColor && kType);
-
-      // ボタンの選択状態を更新
-      document.querySelectorAll('#k-num-group .k-btn').forEach(btn =>
-        btn.classList.toggle('k-selected', btn.dataset.val === kNum));
-      document.querySelectorAll('#k-color-group .k-btn:not(.k-disabled)').forEach(btn =>
-        btn.classList.toggle('k-selected', btn.dataset.val === kColor));
-      document.querySelectorAll('#k-type-group .k-btn').forEach(btn =>
-        btn.classList.toggle('k-selected', btn.dataset.val === kType));
-
-      document.getElementById('kenzoku-hint').textContent =
-        kActive ? '' : (kNum || kColor || kType) ? '3つすべて選ぶと絞り込まれます' : '';
 
       layerGroup.clearLayers();
       let count = 0;
-      const matchedSpots = [];
+      const matched = [];
 
       allMarkers.forEach(m => {
         const s = m._spotData;
@@ -414,56 +259,33 @@
         if (matchPref && matchColor && matchQ && matchKenzoku) {
           layerGroup.addLayer(m);
           count++;
-          if (kActive) matchedSpots.push(s);
+          if (kActive) matched.push(m);
         }
       });
 
       document.getElementById('result-count').textContent = `${count}件`;
       document.getElementById('total-count').textContent = `${count}件表示中`;
 
-      // 結果カードパネル
-      const resultsDiv = document.getElementById('kenzoku-results');
-      const krList = document.getElementById('kr-list');
-      const krHeader = document.getElementById('kr-header');
-
-      if (kActive) {
-        resultsDiv.style.display = 'flex';
-        krHeader.textContent = `🗂 該当スポット ${matchedSpots.length}件`;
-        krList.innerHTML = '';
-        if (matchedSpots.length === 0) {
-          krList.innerHTML = '<div style="font-size:0.8rem;color:#665588;padding:8px">該当スポットなし</div>';
-        } else {
-          matchedSpots.forEach(s => {
-            const card = document.createElement('div');
-            card.className = 'result-card';
-            card.innerHTML = `
-              <div class="rc-pref">${s.prefecture}</div>
-              <div class="rc-name">${s.name}</div>
-              <div class="rc-address">📍 ${s.address}</div>
-              ${s.landmark ? `<div class="rc-landmark">🗺 ${s.landmark}</div>` : ''}
-              <div class="rc-coords">🌐 ${s.lat.toFixed(6)}, ${s.lng.toFixed(6)}</div>
-              <a class="rc-link" href="${s.pageUrl}" target="_blank" onclick="event.stopPropagation()">🐉 龍神ページを見る</a>
-            `;
-            card.addEventListener('click', () => {
-              map.flyTo([s.lat, s.lng], 12, { duration: 1 });
-              const marker = allMarkers.find(m => m._spotData === s);
-              if (marker) setTimeout(() => marker.openPopup(), 900);
-            });
-            krList.appendChild(card);
-          });
-        }
-        setTimeout(() => map.invalidateSize(), 0);
-      } else {
-        if (resultsDiv.style.display !== 'none') {
-          resultsDiv.style.display = 'none';
-          setTimeout(() => map.invalidateSize(), 0);
-        }
+      // 眷属検索で1件ヒットした場合は自動ズーム
+      if (kActive && matched.length === 1) {
+        const s = matched[0]._spotData;
+        map.setView([s.lat, s.lng], 13);
+        matched[0].openPopup();
       }
     }
 
     document.getElementById('search').addEventListener('input', applyFilter);
     document.getElementById('pref-select').addEventListener('change', applyFilter);
     document.getElementById('color-select').addEventListener('change', applyFilter);
+    document.getElementById('k-num').addEventListener('change', applyFilter);
+    document.getElementById('k-color').addEventListener('change', applyFilter);
+    document.getElementById('k-type').addEventListener('change', applyFilter);
+    document.getElementById('k-reset').addEventListener('click', () => {
+      document.getElementById('k-num').value = '';
+      document.getElementById('k-color').value = '';
+      document.getElementById('k-type').value = '';
+      applyFilter();
+    });
   </script>
 </body>
 </html>
