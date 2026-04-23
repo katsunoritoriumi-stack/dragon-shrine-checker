@@ -39,6 +39,27 @@
     }
     #result-count { font-size: 0.8rem; color: #8888bb; }
 
+    #kenzoku-bar {
+      background: #0b0f1c;
+      border-bottom: 1px solid #1a1a3a;
+      padding: 6px 12px;
+      display: flex; gap: 8px; align-items: center; flex-wrap: wrap; flex-shrink: 0;
+    }
+    #kenzoku-bar .k-label { font-size: 0.78rem; color: #aa88ff; white-space: nowrap; }
+    .k-select {
+      padding: 5px 10px; border-radius: 20px;
+      border: 1px solid #3a2a6a; background: #1a1230;
+      color: #e0e0ff; font-size: 0.85rem; outline: none; cursor: pointer;
+    }
+    .k-select.chosen { border-color: #9966ff; }
+    #kenzoku-reset {
+      padding: 4px 10px; border-radius: 12px;
+      border: 1px solid #5533aa; background: transparent;
+      color: #aa88ff; font-size: 0.75rem; cursor: pointer;
+    }
+    #kenzoku-reset:hover { background: #2a1a4e; }
+    #kenzoku-status { font-size: 0.78rem; color: #7766aa; }
+
     #map { flex: 1; position: relative; }
 
     .leaflet-popup-content-wrapper {
@@ -90,6 +111,27 @@
     </select>
     <span id="result-count"></span>
   </div>
+  <div id="kenzoku-bar">
+    <span class="k-label">🔱 眷属検索：</span>
+    <select class="k-select" id="k-num">
+      <option value="">① 数字</option>
+      <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+      <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+      <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+    </select>
+    <select class="k-select" id="k-color">
+      <option value="">② 色</option>
+    </select>
+    <select class="k-select" id="k-type">
+      <option value="">③ 眷属</option>
+      <option value="龍">龍（竜）</option>
+      <option value="麟">麟（麒麟）</option>
+      <option value="鳳">鳳（鳳凰）</option>
+      <option value="武">武（玄武）</option>
+    </select>
+    <button id="kenzoku-reset">クリア</button>
+    <span id="kenzoku-status"></span>
+  </div>
   <div id="map">
     <div id="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#F5F5F5;border-color:#BBBBBB"></div>白</div>
@@ -110,6 +152,14 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="spots_data.js"></script>
   <script>
+    // スポット名から数字・色・眷属を正規表現で解析
+    const COLOR_ORDER = ['白銀','群青','白','銀','金','紫','青','緑','黄','橙','赤','黒'];
+    const NAME_RE = /^第(\d+)(白銀|群青|白|銀|金|紫|青|緑|黄|橙|赤|黒)(龍|麟|鳳|武)/;
+    function parseSpotName(name) {
+      const m = name.match(NAME_RE);
+      return m ? { num: m[1], color: m[2], type: m[3] } : null;
+    }
+
     // --- 地図初期化 ---
     const map = L.map('map', { center: [37.0, 137.0], zoom: 5 });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -133,6 +183,17 @@
       const opt = document.createElement('option');
       opt.value = p; opt.textContent = p;
       sel.appendChild(opt);
+    });
+
+    // 色リスト（spots_dataに実際に登場する色を正規表現解析で自動抽出）
+    const usedColors = COLOR_ORDER.filter(c =>
+      SPOTS.some(s => { const p = parseSpotName(s.name); return p && p.color === c; })
+    );
+    const kColorSel = document.getElementById('k-color');
+    usedColors.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c; opt.textContent = c;
+      kColorSel.appendChild(opt);
     });
 
     let allMarkers = [];
@@ -172,6 +233,18 @@
       const query = document.getElementById('search').value.trim().toLowerCase();
       const pref  = document.getElementById('pref-select').value;
       const color = document.getElementById('color-select').value;
+      const kNum   = document.getElementById('k-num').value;
+      const kColor = document.getElementById('k-color').value;
+      const kType  = document.getElementById('k-type').value;
+      const kActive = kNum && kColor && kType;
+
+      // 眷属検索セレクトの状態を視覚反映
+      document.getElementById('k-num').classList.toggle('chosen', !!kNum);
+      document.getElementById('k-color').classList.toggle('chosen', !!kColor);
+      document.getElementById('k-type').classList.toggle('chosen', !!kType);
+      document.getElementById('kenzoku-status').textContent =
+        kActive ? '' : (kNum || kColor || kType) ? '3つすべて選ぶと絞り込まれます' : '';
+
       layerGroup.clearLayers();
       let count = 0;
       allMarkers.forEach(m => {
@@ -181,7 +254,13 @@
         const matchQ = !query || s.name.toLowerCase().includes(query) ||
                        s.address.toLowerCase().includes(query) ||
                        (s.landmark && s.landmark.toLowerCase().includes(query));
-        if (matchPref && matchColor && matchQ) { layerGroup.addLayer(m); count++; }
+        let matchKenzoku = true;
+        if (kActive) {
+          const parsed = parseSpotName(s.name);
+          matchKenzoku = parsed !== null &&
+            parsed.num === kNum && parsed.color === kColor && parsed.type === kType;
+        }
+        if (matchPref && matchColor && matchQ && matchKenzoku) { layerGroup.addLayer(m); count++; }
       });
       document.getElementById('result-count').textContent = `${count}件`;
       document.getElementById('total-count').textContent = `${count}件表示中`;
@@ -190,6 +269,15 @@
     document.getElementById('search').addEventListener('input', applyFilter);
     document.getElementById('pref-select').addEventListener('change', applyFilter);
     document.getElementById('color-select').addEventListener('change', applyFilter);
+    document.getElementById('k-num').addEventListener('change', applyFilter);
+    document.getElementById('k-color').addEventListener('change', applyFilter);
+    document.getElementById('k-type').addEventListener('change', applyFilter);
+    document.getElementById('kenzoku-reset').addEventListener('click', () => {
+      document.getElementById('k-num').value = '';
+      document.getElementById('k-color').value = '';
+      document.getElementById('k-type').value = '';
+      applyFilter();
+    });
   </script>
 </body>
 </html>
