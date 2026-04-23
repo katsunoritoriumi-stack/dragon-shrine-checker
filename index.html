@@ -39,7 +39,28 @@
     }
     #result-count { font-size: 0.8rem; color: #8888bb; }
 
+    .ctrl-btn {
+      padding: 5px 12px; border-radius: 20px; border: 1px solid #3a2a6a;
+      background: #1a1230; color: #c8a8ff; font-size: 0.8rem;
+      cursor: pointer; white-space: nowrap; transition: background 0.2s;
+    }
+    .ctrl-btn:hover { background: #2a1a50; }
+    .ctrl-btn.active { background: #7a2200; border-color: #ff6633; color: #ffcc99; }
+    .ctrl-btn.save { background: #1a3a1a; border-color: #33aa33; color: #99ffaa; }
+    .ctrl-btn.save:hover { background: #2a5a2a; }
+
     #map { flex: 1; position: relative; }
+
+    #edit-banner {
+      display: none;
+      position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+      z-index: 1000; background: rgba(180,50,0,0.9); border: 1px solid #ff6633;
+      border-radius: 8px; padding: 6px 16px; font-size: 0.85rem; color: #ffcc99;
+      pointer-events: none;
+    }
+    #edit-banner.visible { display: block; }
+
+    .leaflet-marker-draggable { cursor: move !important; }
 
     .leaflet-popup-content-wrapper {
       background: #1a1230; border: 1px solid #5533aa; border-radius: 10px; color: #e0e0ff;
@@ -89,8 +110,13 @@
       <option value="黒">黒</option>
     </select>
     <span id="result-count"></span>
+    <button class="ctrl-btn" id="edit-toggle">✏️ 編集モード</button>
+    <button class="ctrl-btn save" id="save-btn" style="display:none">💾 保存</button>
+    <button class="ctrl-btn" id="load-btn" style="display:none">📂 読み込む</button>
+    <input type="file" id="load-file" accept=".json" style="display:none">
   </div>
   <div id="map">
+    <div id="edit-banner">✏️ 編集モード中 — ピンをドラッグして位置を修正できます</div>
     <div id="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#F5F5F5;border-color:#BBBBBB"></div>白</div>
       <div class="legend-item"><div class="legend-dot" style="background:#BDD0E0;border-color:#8AAABB"></div>白銀</div>
@@ -135,7 +161,21 @@
       sel.appendChild(opt);
     });
 
+    // --- 起動時に localStorage から補正データを復元 ---
+    const corrections = {};
+    try {
+      const saved = localStorage.getItem('dragon-corrections');
+      if (saved) {
+        JSON.parse(saved).forEach(({name, lat, lng}) => {
+          corrections[name] = {lat, lng};
+          const spot = SPOTS.find(s => s.name === name);
+          if (spot) { spot.lat = lat; spot.lng = lng; }
+        });
+      }
+    } catch (e) {}
+
     let allMarkers = [];
+    let editMode = false;
 
     function makePopupContent(spot) {
       return `
@@ -152,9 +192,20 @@
 
     function buildMarker(spot) {
       const icon = makeIcon(spot.fill, spot.border);
-      const m = L.marker([spot.lat, spot.lng], { icon })
+      const m = L.marker([spot.lat, spot.lng], { icon, draggable: false })
         .bindPopup(makePopupContent(spot), { maxWidth: 280 });
       m._spotData = spot;
+
+      m.on('dragend', function () {
+        const pos = this.getLatLng();
+        const s = this._spotData;
+        s.lat = pos.lat;
+        s.lng = pos.lng;
+        corrections[s.name] = {lat: pos.lat, lng: pos.lng};
+        this.setPopupContent(makePopupContent(s));
+        updateSaveBtn();
+      });
+
       return m;
     }
 
@@ -190,6 +241,77 @@
     document.getElementById('search').addEventListener('input', applyFilter);
     document.getElementById('pref-select').addEventListener('change', applyFilter);
     document.getElementById('color-select').addEventListener('change', applyFilter);
+
+    // --- 編集モード ---
+    function updateSaveBtn() {
+      const n = Object.keys(corrections).length;
+      const btn = document.getElementById('save-btn');
+      btn.textContent = n > 0 ? `💾 保存 (${n}件)` : '💾 保存';
+    }
+
+    document.getElementById('edit-toggle').addEventListener('click', function () {
+      editMode = !editMode;
+      this.textContent = editMode ? '✏️ 編集モード ON' : '✏️ 編集モード';
+      this.classList.toggle('active', editMode);
+      document.getElementById('save-btn').style.display = editMode ? '' : 'none';
+      document.getElementById('load-btn').style.display = editMode ? '' : 'none';
+      document.getElementById('edit-banner').classList.toggle('visible', editMode);
+      allMarkers.forEach(m => {
+        if (editMode) m.dragging.enable();
+        else m.dragging.disable();
+      });
+      if (editMode) updateSaveBtn();
+    });
+
+    // --- 保存: localStorage + JSON ダウンロード ---
+    document.getElementById('save-btn').addEventListener('click', function () {
+      const data = Object.entries(corrections).map(([name, {lat, lng}]) => ({name, lat, lng}));
+      try { localStorage.setItem('dragon-corrections', JSON.stringify(data)); } catch (e) {}
+      const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'corrections.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // --- 読み込み: JSON ファイルで既存マーカーを移動 ---
+    document.getElementById('load-btn').addEventListener('click', function () {
+      document.getElementById('load-file').click();
+    });
+
+    document.getElementById('load-file').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        try {
+          const data = JSON.parse(ev.target.result);
+          let applied = 0;
+          data.forEach(({name, lat, lng}) => {
+            corrections[name] = {lat, lng};
+            const m = allMarkers.find(m => m._spotData.name === name);
+            if (m) {
+              m.setLatLng([lat, lng]);
+              m._spotData.lat = lat;
+              m._spotData.lng = lng;
+              m.setPopupContent(makePopupContent(m._spotData));
+              applied++;
+            }
+          });
+          try { localStorage.setItem('dragon-corrections', JSON.stringify(
+            Object.entries(corrections).map(([name, {lat, lng}]) => ({name, lat, lng}))
+          )); } catch (e) {}
+          alert(`${applied}件の座標を読み込みました`);
+          updateSaveBtn();
+        } catch (err) {
+          alert('JSONファイルの読み込みに失敗しました');
+        }
+      };
+      reader.readAsText(file);
+      this.value = '';
+    });
   </script>
 </body>
 </html>
