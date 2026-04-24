@@ -266,6 +266,9 @@
       document.getElementById('result-count').textContent = `${count}件`;
       document.getElementById('total-count').textContent = `${count}件表示中`;
 
+      if (kActive && matched.length > 0) {
+        matched[0].openPopup();
+      }
     }
 
     document.getElementById('search').addEventListener('input', applyFilter);
